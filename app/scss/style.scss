@@ -3,7 +3,148 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  padding: 45px 0;
 
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  display: flex;
+
+  &__list:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__link {
+    font-size: 15px;
+    color: #436372;
+    @extend %rubik-500;
+    transition: color .5s;
+  }
+
+  &__link:hover {
+    color: #de3906
+  }
+}
+
+.user {
+  display: flex;
+
+  &__link {
+    background-color: #fcd7b6;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 91px;
+    height: 52px;
+  }
+
+  &__link:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 11px;
+    bottom: 0;
+    height: 32px;
+    background-color: #fde7d3;
+    width: 1px;
+  }
+
+  &__favorites {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding: 20px 0 0 40px;
+  }
+
+  &__favorites:hover path {
+    fill: #07a4f6;
+  }
+
+  &__purchases:hover path {
+    fill: #27e90d;
+  }
+
+  &__purchases {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 20px 0 0 27px;
+    margin-right: 20px;
+  }
+
+  &__num {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    font-size: 10px;
+    @extend %dmsans-400;
+    text-align: center;
+    line-height: 1.8;
+  }
+
+  &__heart {
+    top: 11px;
+    right: 24px;
+  }
+
+  &__cart {
+    top: 12px;
+    right: 36px;
+  }
+
+  &__btn {
+    background-color: #edf1f4;
+    border-radius: 50%;
+    width: 50px;
+    height: 52px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    outline-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .5s;
+  }
+
+  &__menu {
+    background-color: #a3bbc8;
+  }
+
+  &__searcher {
+    margin-right: 20px;
+  }
+
+  &__purchases path,
+  &__favorites path,
+  &__menu path,
+  &__searcher path {
+    transition: fill .5s;
+  }
+
+  &__searcher:hover path {
+    fill: #ef171d;
+  }
+
+  &__searcher:hover {
+    background-color: #41a35f;
+  }
+
+  &__menu:hover {
+    background-color: #ef9b08;
+  }
+
+  &__menu:hover path {
+    fill: #1537e4;
+  }
+
+
+}
 
 
 
