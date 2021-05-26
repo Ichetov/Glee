@@ -1,12 +1,11 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
-  padding: 45px 10px;
-  max-width: 1790px;
-  margin: 0 auto;
+  padding: 45px 0;
   width: 100%;
 
   &__top {
@@ -58,7 +57,6 @@
     }
   }
 
-
   &__favorites {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
@@ -76,7 +74,7 @@
     margin-right: 20px;
 
     &:hover .user__cart {
-      fill: #27e90d;
+      fill: #0bec35;
     }
   }
 
@@ -113,11 +111,11 @@
     margin-right: 20px;
 
     &:hover .user__search {
-      fill: #ef171d;
+      fill: #1537e4;
     }
 
     &:hover {
-      background-color: #41a35f;
+      background-color: $button;
     }
   }
 
@@ -138,7 +136,7 @@
     background-color: #a3bbc8;
 
     &:hover {
-      background-color: #ef9b08;
+      background-color: $button;
     }
 
     &:hover .user__tile {
@@ -149,11 +147,109 @@
 
 }
 
+.slider-shop {
+
+  &__item {
+    background-repeat: no-repeat;
+    background-position: right 133px bottom 90px;
+    background-color: #fcd7b6;
+  }
+
+  &__inner {
+    height: 820px;
+    padding-top: 220px;
+  }
+
+  &__subject {
+    font-size: 72px;
+    line-height: 1;
+    margin-bottom: 25px;
+    color: $main;
+    width: 420px;
+    @extend %rubik-500;
+  }
+
+  &__text p {
+    font-size: 18px;
+    @extend %rubik-400;
+    line-height: 1.7;
+    max-width: 370px;
+    color: #436372;
+    margin-bottom: 30px;
+  }
+
+  &__arrow {
+    width: 24px;
+    height: 12px;
+    position: absolute;
+    top: 25px;
+    right: 17px;
+    fill: #fff;
+    transition: fill .5s;
+  }
+
+  &__button {
+    outline-color: transparent;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    padding: 19px 93px 19px 25px;
+    background-color: #a3bbc8;
+    @extend %rubik-500;
+    transition: color .5s, background-color .5s;
+    position: relative;
+
+    &:hover svg {
+      fill: $button;
+    }
+
+    &:hover {
+      color: $button;
+      background-color: #1a2a51;
+    }
+
+  }
+}
+
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 42px;
+
+  & button {
+    background-color: #fde3cc;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 11px;
+    padding: 0;
+    cursor: pointer;
+    outline-color: transparent;
+    border: none;
+    @extend %rubik-500;
+    transition: background-color .5s;
+
+    &:hover {
+      background-color: #fff;
+    }
+
+  }
+
+  & li:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  & .slick-active button {
+    background-color: #fff;
+  }
+
+}
+
+
 .footer {
-  @extend %rubik-400;
-  color: $text;
-  font-size: 14px;
-  line-height: 2.3;
 
   &__top {
     padding: 75px 0 70px;
@@ -190,6 +286,9 @@
     }
   }
 
+  &__list:not(:last-child) {
+    margin-bottom: 17px;
+  }
 
   &__letter {
     padding-top: 20px;
@@ -203,6 +302,7 @@
   &__phone {
     display: block;
     transition: color .5s;
+    margin-bottom: 20px;
 
     & span {
       text-transform: uppercase;
@@ -228,7 +328,7 @@
 
   &__adress {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     transition: color .5s;
     line-height: 1.7;
     width: 240px;
@@ -269,7 +369,7 @@
     border: none;
     cursor: pointer;
     outline-color: transparent;
-    padding: 5px 16px;
+    padding: 12px 16px;
     margin-left: -4px;
     transition: background-color .5s, color .5s;
 
@@ -283,8 +383,8 @@
     background-color: #fef7f0;
     border: none;
     outline-color: transparent;
-    padding: 5px 0 5px 12px;
-    max-width: 177px;
+    padding: 11px 0 11px 12px;
+    max-width: 175px;
     width: 100%;
 
     &::placeholder {
