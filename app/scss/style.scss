@@ -15,7 +15,15 @@
   }
 }
 
-.menu {
+.logo {
+  outline-color: transparent;
+
+  &:focus {
+    outline: 1px solid $outline;
+  }
+}
+
+.site-menu {
   display: flex;
 
   &__list:not(:last-child) {
@@ -27,9 +35,14 @@
     color: #436372;
     @extend %rubik-500;
     transition: color .5s;
+    outline-color: transparent;
 
     &:hover {
       color: $link;
+    }
+
+    &:focus {
+      outline: 1px solid $outline;
     }
   }
 
@@ -44,6 +57,11 @@
     position: relative;
     width: 91px;
     height: 52px;
+    outline-color: transparent;
+
+    &:focus {
+      outline: 1px solid $outline;
+    }
 
     &:nth-child(2)::before {
       content: '';
@@ -198,6 +216,11 @@
     @extend %rubik-500;
     transition: color .5s, background-color .5s;
     position: relative;
+    outline-color: transparent;
+
+    &:focus {
+      outline: 1px solid $outline;
+    }
 
     &:hover svg {
       fill: $button;
@@ -207,7 +230,6 @@
       color: $button;
       background-color: #1a2a51;
     }
-
   }
 }
 
@@ -234,7 +256,6 @@
     &:hover {
       background-color: #fff;
     }
-
   }
 
   & li:not(:last-child) {
@@ -257,12 +278,15 @@
 
   &__item {
     display: flex;
-    padding: 43px 0 40px;
   }
-
 
   &__content {
     width: 207px;
+    padding: 43px 0 40px;
+  }
+
+  &__line {
+    border-right: 1px solid #e8e4df;
   }
 
   &__content-wrap {
@@ -288,7 +312,7 @@
   &__icon {
     position: relative;
     margin-right: 24px;
-    top: 13px;
+    top: 55px;
 
     &::after {
       content: '';
@@ -297,12 +321,10 @@
       height: 20px;
       background-color: #dfe3e2;
       border-radius: 50%;
-      bottom: 45px;
+      top: 33px;
       right: -3px;
       opacity: 0.34;
-
     }
-
   }
 
   &__icon-wrap::after {
@@ -322,6 +344,140 @@
     fill: #b3c6cf;
   }
 
+}
+
+.products {
+  padding: 65px 0 82px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  &__list:not(:last-child) {
+    margin-right: 28px;
+  }
+
+  &__btn {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline-color: transparent;
+    text-transform: none;
+    transition: color .3s;
+    font-size: 16px;
+    color: $buttons;
+    @extend %dmsans-700;
+    outline: transparent;
+
+    &:focus {
+      outline: 1px solid $outline;
+    }
+
+    &:hover {
+      color: $title;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px 30px;
+  }
+
+  &__item {
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  }
+
+  &__title {
+    font-size: 36px;
+    color: #191919;
+  }
+
+}
+
+.card-product {
+  text-align: center;
+  padding: 25px 0 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:hover &__box {
+    opacity: 1;
+  }
+
+  &__pic {
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  &__inner {
+    width: 247px;
+    height: 217px;
+    margin-bottom: 80px;
+    position: relative;
+  }
+
+  &__box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 37px;
+    bottom: 24px;
+    opacity: 0;
+    transition: opacity .3s;
+  }
+
+  &__link {
+    width: 46px;
+    height: 46px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: #a3bbc8;
+    transition: background-color .4s, fill .3s;
+
+    &:hover {
+      background-color: #a3bac7;
+      fill: #fff;
+    }
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  &__heart-product,
+  &__cart-product,
+  &__magnifier {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__subject {
+    @extend %dmsans-500;
+    margin-bottom: 10px;
+    color: #243f4d;
+  }
+
+  &__num {
+    color: #a3bbc8;
+  }
+}
+
+.mixitup-control-active {
+  color: $title;
 }
 
 .footer {
@@ -358,6 +514,11 @@
 
   &__link {
     transition: color .5s;
+    outline-color: transparent;
+
+    &:focus {
+      outline: 1px solid $outline;
+    }
 
     &:hover {
       color: $link;
@@ -381,6 +542,11 @@
     display: block;
     transition: color .5s;
     margin-bottom: 20px;
+    outline-color: transparent;
+
+    &:focus {
+      outline: 1px solid $outline;
+    }
 
     & span {
       text-transform: uppercase;
@@ -394,6 +560,11 @@
   &__contact {
     display: block;
     transition: color .5s;
+    outline-color: transparent;
+
+    &:focus {
+      outline: 1px solid $outline;
+    }
 
     & span {
       text-transform: uppercase;
@@ -410,6 +581,11 @@
     transition: color .5s;
     line-height: 1.7;
     width: 240px;
+    outline-color: transparent;
+
+    &:focus {
+      outline: 1px solid $outline;
+    }
 
     & span {
       text-transform: uppercase;
@@ -451,6 +627,11 @@
     padding: 12px 16px;
     margin-left: -4px;
     transition: background-color .5s, color .5s;
+    outline-color: transparent;
+
+    &:focus {
+      outline: 1px solid $outline;
+    }
 
     &:hover {
       background-color: #cb168d;
@@ -500,6 +681,11 @@
 
   &__content-link {
     transition: color .4s;
+    outline-color: transparent;
+
+    &:focus {
+      outline: 1px solid $outline;
+    }
 
     &:hover {
       color: $link;

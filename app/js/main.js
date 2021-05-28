@@ -6,5 +6,7 @@ speed: 1200,
 autoplay: true,
 })
 
+var mixer = mixitup('.products__content');
+  
 
 });
