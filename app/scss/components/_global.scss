@@ -1,0 +1,122 @@
+html,
+body {
+  height: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  color: $blue700;
+  font-family: $DMSans;
+  font-weight: $DMSans700;
+  font-size: 16px;
+  line-height: 1.3;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  &--large {
+    max-width: 1800px;
+  }
+}
+
+
+.btn-circle {
+  border: none;
+  cursor: pointer;
+  outline-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  outline: transparent;
+  background-color: $white100;
+
+  &:focus {
+    outline: 1px solid $red500;
+  }
+
+  &:active {
+    background-color: $orange400;
+  }
+  &:hover{
+    background-color: $blue900;
+  }
+}
+
+.btn-link {
+  outline-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: $white100;
+  padding: 19px 93px 19px 25px;
+  font-family: $Rubik;
+  font-weight: $Rubik500;
+  transition: color .5s, background-color .5s;
+  position: relative;
+  outline-color: transparent;
+
+  &__arrow {
+    width: 24px;
+    height: 12px;
+    position: absolute;
+    top: 25px;
+    right: 17px;
+    fill: $white100;
+    transition: fill .5s;
+  }
+
+  &:active {
+    background-color: $orange400;
+  }
+
+  &:focus {
+    outline: 1px solid $red500;
+  }
+
+  &:hover svg {
+    fill: $white400;
+  }
+
+  &:hover {
+    color: $orange400;
+    background-color: $blue900;
+  }
+}
+
+.title {
+  margin: 0 auto 30px;
+  max-width: 420px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-align: center;
+  font-size: 36px;
+  color: $white900;
+}

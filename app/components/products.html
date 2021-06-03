@@ -1,34 +1,34 @@
-<div class="products">
+<section class="products-week">
   <div class="container">
-    <h2 class="products__title">
+    <h2 class="products-week__title">
       Products of the week
     </h2>
-    <ul class="products__filter">
-      <li class="products__list">
-        <button class="products__btn" type="button" data-filter="all">
+    <ul class="products-week__filter">
+      <li class="products-week__list">
+        <button class="products-week__btn" type="button" data-filter="all">
           All
       </li>
-      <li class="products__list">
-        <button class="products__btn" type="button" data-filter=".category-a">
+      <li class="products-week__list">
+        <button class="products-week__btn" type="button" data-filter=".category-a">
           Furnitures
       </li>
-      <li class="products__list">
-        <button class="products__btn" type="button" data-filter=".category-b">
+      <li class="products-week__list">
+        <button class="products-week__btn" type="button" data-filter=".category-b">
           Chairs
       </li>
-      <li class="products__list">
-        <button class="products__btn" type="button" data-filter=".category-c">
+      <li class="products-week__list">
+        <button class="products-week__btn" type="button" data-filter=".category-c">
           Lighting
       </li>
-      <li class="products__list">
-        <button class="products__btn" type="button" data-filter=".category-d">
+      <li class="products-week__list">
+        <button class="products-week__btn" type="button" data-filter=".category-d">
           Decor
       </li>
     </ul>
-    <div class="products__content">
-      <article class="products__item card-product mix category-a">
+    <ul class="products__content">
+      <li class="card-product products-week__item  mix category-a">
         <div class="card-product__inner">
-          <img class="card-product__pic" src="images/products/1.png" alt="armchair">
+          <img class="card-product__pic" src="images/products/1.png" width="187px" height="220px" alt="armchair">
           <div class="card-product__box">
             <a class="card-product__link" href="#">
               <span class="sr-only">added to favorites</span>
@@ -36,62 +36,64 @@
                 <use xlink:href="images/sprite.svg#magnifier"></use>
               </svg>
             </a>
-            <a class="card-product__link" href="#">
+            <button class="card-product__link" type="button">
               <span class="sr-only">added to cart</span>
               <svg class="card-product__cart-product">
                 <use xlink:href="images/sprite.svg#cart-product"></use>
               </svg>
-            </a>
-            <a class="card-product__link" href="#">
+            </button>
+            <button class="card-product__link" type="button">
               <span class="sr-only">added to favorites</span>
               <svg class="card-product__heart-product">
                 <use xlink:href="images/sprite.svg#heart-product"></use>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
         <div class="card-product__wrap">
-          <p class="card-product__subject">
+          <h3 class="card-product__subject">
             Wooden radio
-          </p>
+          </h3>
           <p class="card-product__num">
             <span>$</span>29.00
           </p>
         </div>
-      </article>
-      <article class="products__item card-product mix category-d">
+      </li>
+      <li class="products__item card-product mix category-d">
         <div class="card-product__inner">
           <img class="card-product__pic" src="images/products/2.png" alt="armchair">
           <div class="card-product__box">
             <a class="card-product__link" href="#">
+              <span class="sr-only">when you click on it, we will go to a page with a detailed description of the
+                product</span>
               <svg class="card-product__magnifier">
                 <use xlink:href="images/sprite.svg#magnifier"></use>
               </svg>
             </a>
-            <a class="card-product__link" href="#">
-              <span class="sr-only">added to cart</span>
+            <button class="card-product__btn" type="button">
+              <span class="sr-only">awhen you click add the product to the cart</span>
               <svg class="card-product__cart-product">
                 <use xlink:href="images/sprite.svg#cart-product"></use>
               </svg>
-            </a>
-            <a class="card-product__link" href="#">
-              <span class="sr-only">added to favorites</span>
+            </button>
+            <button class="card-product__btn" type="button">
+              <span class="sr-only">when you click add the product to your favorites</span>
               <svg class="card-product__heart-product">
                 <use xlink:href="images/sprite.svg#heart-product"></use>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
         <div class="card-product__wrap">
-          <p class="card-product__subject">
+          <h3 class="card-product__subject">
             Wooden chair
-          </p>
+          </h3>
           <p class="card-product__num">
             <span>$</span>29.00
           </p>
         </div>
-      </article>
-      <article class="products__item card-product mix category-b">
+      </li>
+      <li class="products__item card-product mix category-b">
         <div class="card-product__inner">
           <img class="card-product__pic" src="images/products/3.png" alt="armchair">
           <div class="card-product__box">
@@ -100,30 +102,30 @@
                 <use xlink:href="images/sprite.svg#magnifier"></use>
               </svg>
             </a>
-            <a class="card-product__link" href="#">
+            <button class="card-product__link" type="button">
               <span class="sr-only">added to cart</span>
               <svg class="card-product__cart-product">
                 <use xlink:href="images/sprite.svg#cart-product"></use>
               </svg>
-            </a>
-            <a class="card-product__link" href="#">
+            </button>
+            <button class="card-product__link" type="button">
               <span class="sr-only">added to favorites</span>
               <svg class="card-product__heart-product">
                 <use xlink:href="images/sprite.svg#heart-product"></use>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
         <div class="card-product__wrap">
-          <p class="card-product__subject">
+          <h3 class="card-product__subject">
             White chair
-          </p>
+          </h3>
           <p class="card-product__num">
             <span>$</span>29.00
           </p>
         </div>
-      </article>
-      <article class="products__item card-product mix category-c">
+      </li>
+      <li class="products__item card-product mix category-c">
         <div class="card-product__inner">
           <img class="card-products__pic" src="images/products/4.png" alt="armchair">
           <div class="card-product__box">
@@ -132,30 +134,30 @@
                 <use xlink:href="images/sprite.svg#magnifier"></use>
               </svg>
             </a>
-            <a class="card-product__link" href="#">
+            <button class="card-product__link" type="button">
               <span class="sr-only">added to cart</span>
               <svg class="card-product__cart-product">
                 <use xlink:href="images/sprite.svg#cart-product"></use>
               </svg>
-            </a>
-            <a class="card-product__link" href="#">
+            </button>
+            <button class="card-product__link" type="button">
               <span class="sr-only">added to favorites</span>
               <svg class="card-product__heart-product">
                 <use xlink:href="images/sprite.svg#heart-product"></use>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
         <div class="card-product__wrap">
-          <p class="card-product__subject">
+          <h3 class="card-product__subject">
             Retro table
-          </p>
+          </h3>
           <p class="card-product__num">
             <span>$</span>29.00
           </p>
         </div>
-      </article>
-      <article class="products__item card-product mix category-a">
+      </li>
+      <li class="products__item card-product mix category-a">
         <div class="card-product__inner">
           <img class="card-products__pi" src="images/products/5.png" alt="armchair">
           <div class="card-product__box">
@@ -164,30 +166,30 @@
                 <use xlink:href="images/sprite.svg#magnifier"></use>
               </svg>
             </a>
-            <a class="card-product__link" href="#">
+            <button class="card-product__link" type="button">
               <span class="sr-only">added to cart</span>
               <svg class="card-product__cart-product">
                 <use xlink:href="images/sprite.svg#cart-product"></use>
               </svg>
-            </a>
-            <a class="card-product__link" href="#">
+            </button>
+            <button class="card-product__link" type="button">
               <span class="sr-only">added to favorites</span>
               <svg class="card-product__heart-product">
                 <use xlink:href="images/sprite.svg#heart-product"></use>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
         <div class="card-product__wrap">
-          <p class="card-product__subject">
+          <h3 class="card-product__subject">
             Wooden radio
-          </p>
+          </h3>
           <p class="card-product__num">
             <span>$</span>29.00
           </p>
         </div>
-      </article>
-      <article class="products__item card-product mix category-d">
+      </li>
+      <li class="products__item card-product mix category-d">
         <div class="card-product__inner">
           <img class="card-product__pic" src="images/products/6.png" alt="armchair">
           <div class="card-product__box">
@@ -196,30 +198,30 @@
                 <use xlink:href="images/sprite.svg#magnifier"></use>
               </svg>
             </a>
-            <a class="card-product__link" href="#">
+            <button class="card-product__link" type="button">
               <span class="sr-only">added to cart</span>
               <svg class="card-product__cart-product">
                 <use xlink:href="images/sprite.svg#cart-product"></use>
               </svg>
-            </a>
-            <a class="card-product__link" href="#">
+            </button>
+            <button class="card-product__link" type="button">
               <span class="sr-only">added to favorites</span>
               <svg class="card-product__heart-product">
                 <use xlink:href="images/sprite.svg#heart-product"></use>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
         <div class="card-product__wrap">
-          <p class="card-product__subject">
+          <h3 class="card-product__subject">
             Wooden chair
-          </p>
+          </h3>
           <p class="card-product__num">
             <span>$</span>29.00
           </p>
         </div>
-      </article>
-      <article class="products__item card-product mix category-c">
+      </li>
+      <li class="products__item card-product mix category-c">
         <div class="card-product__inner">
           <img class="card-product__pic" src="images/products/7.png" alt="armchair">
           <div class="card-product__box">
@@ -228,30 +230,30 @@
                 <use xlink:href="images/sprite.svg#magnifier"></use>
               </svg>
             </a>
-            <a class="card-product__link" href="#">
+            <button class="card-product__link" type="button">
               <span class="sr-only">added to cart</span>
               <svg class="card-product__cart-product">
                 <use xlink:href="images/sprite.svg#cart-product"></use>
               </svg>
-            </a>
-            <a class="card-product__link" href="#">
+            </button>
+            <button class="card-product__link" type="button">
               <span class="sr-only">added to favorites</span>
               <svg class="card-product__heart-product">
                 <use xlink:href="images/sprite.svg#heart-product"></use>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
         <div class="card-product__wrap">
-          <p class="card-product__subject">
+          <h3 class="card-product__subject">
             White chair
-          </p>
+          </h3>
           <p class="card-product__num">
             <span>$</span>29.00
           </p>
         </div>
-      </article>
-      <article class="products__item card-product mix category-a">
+      </li>
+      <li class="products__item card-product mix category-a">
         <div class="card-product__inner">
           <img class="card-product__pic" src="images/products/8.png" alt="armchair">
           <div class="card-product__box">
@@ -260,28 +262,28 @@
                 <use xlink:href="images/sprite.svg#magnifier"></use>
               </svg>
             </a>
-            <a class="card-product__link" href="#">
+            <button class="card-product__link" type="button">
               <span class="sr-only">added to cart</span>
               <svg class="card-product__cart-product">
                 <use xlink:href="images/sprite.svg#cart-product"></use>
               </svg>
-            </a>
-            <a class="card-product__link" href="#">
+            </button>
+            <button class="card-product__link" type="button">
               <span class="sr-only">added to favorites</span>
               <svg class="card-product__heart-product">
                 <use xlink:href="images/sprite.svg#heart-product"></use>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
         <div class="card-product__wrap">
-          <p class="card-product__subject">
+          <h3 class="card-product__subject">
             Retro table
-          </p>
+          </h3>
           <p class="card-product__num">
             <span>$</span>29.00
           </p>
         </div>
-      </article>
-    </div>
+      </li>
+    </ul>
   </div>

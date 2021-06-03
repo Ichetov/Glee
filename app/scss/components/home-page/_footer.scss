@@ -1,0 +1,254 @@
+.footer {
+
+  &__top {
+    padding: 75px 0 70px;
+    display: flex;
+    border-bottom: 1px solid $white200;
+    font-family: $Rubik;
+    font-weight: $Rubik400;
+    color: $white500;
+    font-size: 14px;
+  }
+
+  &__info {
+    font-style: normal;
+  }
+
+  &__contacts {
+    width: 200px;
+    margin-right: 100px;
+  }
+
+  &__services {
+    margin-right: 170px;
+    width: 130px;
+  }
+
+  &__account {
+    margin-right: 200px;
+    width: 95px;
+  }
+
+  &__link {
+    transition: color .5s;
+    outline-color: transparent;
+
+
+    &:focus {
+      outline: 1px solid $red500;
+    }
+
+    &:hover {
+      color: $yellow300;
+    }
+
+    &:active {
+      color: $orange400;
+    }
+
+  }
+
+  &__list {
+    &:not(:last-child) {
+      margin-bottom: 17px;
+    }
+
+  }
+
+  &__newsletter {
+    width: 272px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  &__phone {
+    display: block;
+    transition: color .5s;
+    margin-bottom: 20px;
+    outline-color: transparent;
+
+    &:focus {
+      outline: 1px solid $red500;
+    }
+
+    &:active {
+      color: $orange400;
+    }
+
+    & span {
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      color: $yellow300;
+    }
+  }
+
+  &__mail {
+    display: block;
+    transition: color .5s;
+    outline-color: transparent;
+
+    &:focus {
+      outline: 1px solid $red500;
+    }
+
+    & span {
+      text-transform: uppercase;
+    }
+
+    &:active {
+      color: $orange400;
+    }
+
+    &:hover {
+      color: $yellow300;
+    }
+  }
+
+  &__adress {
+    display: block;
+    margin-bottom: 15px;
+    transition: color .5s;
+    line-height: 1.7;
+    max-width: 240px;
+    outline-color: transparent;
+
+    &:focus {
+      outline: 1px solid $red500;
+    }
+
+    & span {
+      text-transform: uppercase;
+    }
+
+    &:active {
+      color: $orange400;
+    }
+
+    &:hover {
+      color: $yellow300;
+    }
+  }
+
+  &__text {
+    line-height: 1.7;
+    max-width: 240px;
+  }
+
+  &__logo {
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    padding-top: 20px;
+    font-family: $DMSans;
+    font-weight: $DMSans700;
+    color: $blue900;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    font-size: 16px;
+    width: 103px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  &__button {
+    font-family: $DMSans;
+    font-weight: $DMSans400;
+    color: $white100;
+    font-size: 14px;
+    background-color: $blue300;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    outline-color: transparent;
+    padding: 12px 16px;
+    margin-left: -4px;
+    transition: background-color .5s, color .5s;
+    outline-color: transparent;
+
+    &:focus {
+      outline: 1px solid $red500;
+    }
+
+    &:hover {
+      background-color: darken($blue300, 30%);
+      color: darken($white100, 20%);
+    }
+
+    &:active {
+      background-color: $orange400;
+    }
+  }
+
+  &__input {
+    background-color: $pink100;
+    border: none;
+    outline-color: transparent;
+    padding: 11px 0 11px 12px;
+    max-width: 164px;
+    width: 100%;
+
+    &::placeholder {
+      font-family: $DMSans;
+      font-weight: $DMSans400;
+      font-size: 12px;
+      color: $blue700;
+    }
+
+    &:active {
+      background-color: $orange400;
+    }
+  }
+
+  &__shipment {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1;
+    padding: 33px 0 40px;
+    font-family: $Rubik;
+    font-weight: $Rubik400;
+    color: $white500;
+    font-size: 14px;
+  }
+
+
+  &__content-list {
+    &:not(:last-child) {
+      margin-right: 15px;
+      border-right: 1px solid $white500;
+      padding-right: 15px;
+    }
+  }
+
+  &__content-link {
+    transition: color .4s;
+    outline-color: transparent;
+
+    &:focus {
+      outline: 1px solid $red500;
+    }
+
+    &:hover {
+      color: $yellow300;
+    }
+
+    &:active {
+      color: $orange400;
+    }
+  }
+
+}
