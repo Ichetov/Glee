@@ -1,0 +1,86 @@
+.card-product {
+  text-align: center;
+  padding: 25px 0 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:hover &__box {
+    opacity: 1;
+  }
+
+  &__pic {
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  &__inner {
+    width: 247px;
+    height: 217px;
+    margin-bottom: 60px;
+    position: relative;
+  }
+
+  &__box {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    bottom: 24px;
+    opacity: 0;
+    transition: opacity .3s;
+  }
+
+  &__btn,
+  &__link {
+    transition: background-color .4s, fill .3s;
+    fill: $blue300;
+    box-shadow: 1px -2px 30px 3px rgba(34, 60, 80, 0.38);
+
+    &:hover {
+      background-color: $blue200;
+      fill: $white100;
+    }
+
+    &:focus {
+      outline: 1px solid $red500;
+    }
+
+    &:active {
+      background-color: $yellow300;
+    }
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  &__heart-product,
+  &__cart-product,
+  &__magnifier {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__subject {
+    font-family: $DMSans;
+    font-weight: $DMSans500;
+    margin-bottom: 10px;
+    color: $blue700;
+    width: 125px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-align: center;
+  }
+
+  &__num {
+    color: $blue300;
+  }
+
+  .mixitup-control-active {
+    color: $white500;
+  }
+}
