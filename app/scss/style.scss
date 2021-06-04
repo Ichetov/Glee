@@ -11,3 +11,64 @@
 @import 'components/home-page/card-product';
 @import 'components/home-page/products-filter';
 @import 'components/home-page/footer';
+
+.lamps-shop {
+  margin-bottom: 100px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 35px;
+
+  }
+
+  &__inner {
+    max-width: 870px;
+    background-color: $pink300;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0 80px;
+  }
+
+  &__content {
+    max-width: 340px;
+
+  }
+
+  &__img {
+    margin-top: -200px;
+    margin-right: 50px;
+  }
+
+  &__title {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    border: 1px solid $pink500;
+    border-radius: 5px;
+    color: $blue400;
+
+    &:hover .lamps-shop__arrov {
+      fill: white;
+    }
+  }
+
+  &__arrov {
+    fill: $blue400;
+  
+}
+
+&__pic{
+  object-fit: contain;
+}
+
+
+
+
+}
