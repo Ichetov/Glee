@@ -1,4 +1,5 @@
 $white900:#191919;
+$white700:#f8f8f8;
 $white500:#7b7b7b;
 $white400:#8b8b8b;
 $white300:#b3c6cf;
@@ -10,6 +11,7 @@ $orange200:#fcd7b6;
 $orange100:#fde3cc;
 $blue900:#1f2044;
 $blue700:#243f4d;
+$blue500:#222933;
 $blue400:#436372;
 $blue300:#a3bbc8;
 $blue200:#a3bac7;
@@ -20,14 +22,30 @@ $pink200:#fde7d3;
 $pink100:#fef7f0;
 
 
-
-
-
-$DMSans:'DMSans', 'Aria', sans-serif;
+$DMSans:'DMSans',
+'Aria',
+sans-serif;
 $DMSans700: 700;
 $DMSans500: 500;
 $DMSans400: 400;
 
-$Rubik:'Rubik', 'Aria', sans-serif;
+$Rubik:'Rubik',
+'Aria',
+sans-serif;
 $Rubik500: 500;
 $Rubik400: 400;
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+@mixin line-clamp ($property) {
+  -webkit-line-clamp: $property;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

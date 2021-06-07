@@ -1,15 +1,18 @@
 .information {
-  background-color: $white100;
 
   &__items {
     display: flex;
+    background-color: $pink100;
   }
 
   &__item {
     display: flex;
     flex-grow: 1;
     justify-content: center;
-    border-right: 1px solid $white100;
+
+    &:not(:last-child) {
+      border-right: 1px solid $white300;
+    }
   }
 
   &__content {
@@ -32,7 +35,7 @@
       width: 20px;
       height: 20px;
       position: absolute;
-      background-color: $white100;
+      background-color: $white200;
       top: 88px;
       left: -39px;
       border-radius: 50%;
@@ -57,17 +60,14 @@
     }
 
     &--credit-card {
-
       &::before {
         background-image: url(../images/icons/credit-card.svg);
       }
     }
   }
 
-
   &__content-wrap {
     width: 214px;
-
   }
 
   &__title {
@@ -79,11 +79,7 @@
     font-family: $DMSans;
     font-weight: $DMSans400;
     line-height: 1.9;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    @include line-clamp(2);
   }
 
   &__icon-wrap::after {
@@ -91,6 +87,7 @@
     right: -6px;
   }
 
+  &__credit-card,
   &__delivery-truck {
     width: 55px;
     height: 35px;
@@ -98,9 +95,7 @@
   }
 
   &__credit-card {
-    width: 55px;
     height: 45px;
-    fill: $white300;
   }
 
 }

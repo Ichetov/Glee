@@ -40,7 +40,9 @@ body {
     max-width: 1800px;
   }
 }
-
+element.style{
+  display: block;
+}
 
 .btn-circle {
   border: none;
@@ -111,13 +113,8 @@ body {
 
 .title {
   margin: 0 auto 30px;
-  max-width: 420px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
   text-align: center;
   font-size: 36px;
   color: $white900;
+  @include line-clamp(1);
 }

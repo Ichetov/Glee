@@ -1,0 +1,88 @@
+.partners {
+
+  &__item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 266px;
+    position: relative;
+  }
+
+  &__wrap {
+    &:hover .slick-dots {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__pic {
+    transition: transform 0.3s;
+    object-fit: contain;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    &:focus {
+      outline: 1px solid $red500;
+    }
+
+    &:active {
+      color: $red500;
+    }
+  }
+
+  &__img {
+    width: 162px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+  }
+
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 22px;
+    opacity: 0;
+    transition: opacity 0.4s, transform 1s;
+    transform: translateX(-600px);
+
+    & button {
+      background-color: $white300;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      font-size: 0;
+      padding: 0;
+      cursor: pointer;
+      outline-color: transparent;
+      border: none;
+      font-family: $Rubik;
+      font-weight: $Rubik400;
+      transition: background-color 0.5s;
+
+      &:hover {
+        background-color: $orange400;
+      }
+
+      &:focus {
+        outline: 1px solid $red500;
+      }
+
+      &:active {
+        color: $red500;
+      }
+    }
+
+    & li:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    & .slick-active button {
+      background-color: $orange400;
+    }
+  }
+}

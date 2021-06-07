@@ -64,12 +64,12 @@
     background-color: $orange100;
     background-repeat: no-repeat;
     position: relative;
-    width: 91px;
-    height: 52px;
     outline-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 90px;
+    height: 50px;
 
     &:focus {
       outline: 1px solid $red500;
@@ -86,7 +86,7 @@
       top: 11px;
       bottom: 11px;
       background-color: $pink200;
-      width: 1px;
+      width: 2px;
     }
   }
 
@@ -114,6 +114,7 @@
     margin-right: 15px;
     transition: background-color 0.4s;
 
+
     &:hover {
       background-color: darken($orange100, 5%);
     }
@@ -128,31 +129,28 @@
   }
 
   &__num {
-    position: relative;
+    position: absolute;
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background-color: $white100;
     font-size: 10px;
-    font-family: $DMSans;
     font-weight: $DMSans400;
     text-align: center;
     line-height: 1.8;
-    right: 5px;
-    top: -7px;
+    right: 26px;
+    top: 9px;
   }
 
+  &__profile,
+  &__search,
+  &__cart,
   &__heart {
     width: 18px;
     height: 17px;
     transition: fill 0.5s;
   }
 
-  &__cart {
-    width: 19px;
-    height: 17px;
-    transition: fill 0.5s;
-  }
 
   &__btn {
     background-color: #edf1f4;
@@ -178,17 +176,11 @@
   }
 
   &__search {
-    width: 19px;
-    height: 17px;
-    transition: fill 0.5s;
     fill: $blue700;
   }
 
   &__profile {
-    width: 20px;
-    height: 20px;
     fill: $white100;
-    transition: fill 0.5s;
   }
 
   &__button {
