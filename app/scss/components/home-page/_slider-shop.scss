@@ -19,11 +19,13 @@
 
   &__pic {
     position: relative;
+    max-width: 640px;
+    height: 260px;
 
     &::after {
       content: '';
       border-radius: 50%;
-      background: linear-gradient(88deg, rgba(255, 255, 255, 0), #fffcfa);
+      background-image: linear-gradient(88deg, rgba(255, 255, 255, 0), #fffcfa);
       position: absolute;
       top: -190px;
       left: 125px;
@@ -103,8 +105,11 @@
       }
     }
 
-    & li:not(:last-child) {
-      margin-right: 10px;
+    & li {
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
     }
 
     & .slick-active button {

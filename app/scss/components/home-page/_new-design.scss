@@ -1,0 +1,91 @@
+.new-design {
+  margin-bottom: 115px;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px 35px;
+    margin-bottom: 120px;
+  }
+
+  &__item {
+    background-color: $white700;
+    position: relative;
+    text-align: left;
+    padding: 40px 0 0 35px;
+    height: 245px;
+    overflow: hidden;
+    transition: box-shadow 0.4s;
+
+    &:hover {
+      box-shadow: 10px 6px 47px 20px rgba(37, 37, 37, 0.1);
+    }
+  }
+
+  &__img {
+    position: absolute;
+  }
+
+  &__pendant {
+    width: 355px;
+    height: 112px;
+    top: 103px;
+    right: -80px;
+  }
+
+  &__pieds {
+    width: 312px;
+    height: 120px;
+    top: 100px;
+    right: -44px;
+  }
+
+  &__rocking {
+    width: 118px;
+    height: 153px;
+    top: 55px;
+    right: 50px;
+  }
+
+  &__bedstead {
+    width: 283px;
+    height: 148px;
+    top: 81px;
+    right: -26px;
+  }
+
+  &__chair {
+    width: 150px;
+    height: 185px;
+    top: 42px;
+    right: 22px;
+  }
+
+  &__bamboo {
+    width: 425px;
+    height: 122px;
+    top: 114px;
+    right: -150px;
+  }
+
+  &__pic {
+    object-fit: contain;
+  }
+
+  &__wrap {
+    width: 171px;
+    text-align: left;
+  }
+
+  &__subject {
+    font-size: 20px;
+    color: $white900;
+    margin-bottom: 16px;
+    @include line-clamp(2);
+  }
+
+  &__text {
+    color: $blue300;
+  }
+
+}

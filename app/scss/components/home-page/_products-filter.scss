@@ -4,8 +4,10 @@
   margin-bottom: 80px;
 
 
-  &__list:not(:last-child) {
-    margin-right: 28px;
+  &__list {
+    &:not(:last-child) {
+      margin-right: 28px;
+    }
   }
 
   &__btn {
@@ -30,5 +32,13 @@
     &:hover {
       color: $white900;
     }
+
+    &:active {
+      color: $orange400;
+    }
+  }
+
+  .mixitup-control-active {
+    color: $white900;
   }
 }
