@@ -24,6 +24,10 @@
     width: 95px;
   }
 
+  &__wrapper{
+    display: flex;
+  }
+
   &__link {
     transition: color .5s;
     outline-color: transparent;

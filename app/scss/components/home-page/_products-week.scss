@@ -1,6 +1,9 @@
 .products-week {
-  padding: 65px 0 82px;
-  margin-bottom: 180px;
+  padding-top: 65px;
+
+  &__wrapper {
+    margin-bottom: 180px;
+  }
 
   &__content {
     display: grid;
@@ -13,4 +16,3 @@
   }
 
 }
-
