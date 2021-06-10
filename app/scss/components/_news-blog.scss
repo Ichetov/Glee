@@ -1,0 +1,64 @@
+.news-blog {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include max($xl) {
+      margin-bottom: 15px;
+    }
+
+    @include max($md) {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    padding-right: 30px;
+    position: relative;
+    transition: color 0.4s;
+
+    &:hover:after {
+      transform: translateX(30px);
+    }
+
+    &::after {
+      content: '';
+      background-image: url('../images/icons/shape.svg');
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-repeat: no-repeat;
+      right: 0;
+      top: 5px;
+      transition: transform 0.5s,
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+
+    @include max($xl) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__inner {
+    max-width: 370px;
+    margin-bottom: -173px;
+    background-color: $white100;
+
+    @include max($xl) {
+      margin: 0 auto;
+    }
+
+    @include max($md) {
+      max-width: 293px;
+      margin-bottom: 10px;
+    }
+  }
+
+}

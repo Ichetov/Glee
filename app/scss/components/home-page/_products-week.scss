@@ -1,11 +1,31 @@
 .products-week {
-  padding: 65px 0 82px;
-  margin-bottom: 180px;
+  padding-top: 65px;
+
+  @include max($xl) {
+    padding-top: 20px;
+  }
+
+  &__wrapper {
+    margin-bottom: 180px;
+
+    @include max($xl) {
+      margin-bottom: 50px;
+    }
+
+    @include max($md) {
+      margin-bottom: 20px;
+    }
+  }
 
   &__content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px 30px;
+
+    @include max($xl) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px 10px;
+    }
   }
 
   &__item {
@@ -13,4 +33,3 @@
   }
 
 }
-

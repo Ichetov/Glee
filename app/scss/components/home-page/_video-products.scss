@@ -5,6 +5,18 @@
     background-position: top center;
     background-size: cover;
     height: 520px;
+
+    @include max($xl) {
+      height: 280px;
+    }
+
+    @include max($md) {
+      height: 195px;
+    }
+
+     @include max($cm) {
+       height: 130px;
+     }
   }
 
   &__play {
@@ -13,6 +25,11 @@
     z-index: 2;
     fill: $white100;
     transition: fill 0.4s;
+
+    @include max($md) {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &__link {
@@ -44,6 +61,11 @@
       background-color: $blue300;
       border-radius: 50%;
       transition: background-color 0.5s;
+
+      @include max($md) {
+        width: 70px;
+        height: 70px;
+      }
     }
 
     &::before {
@@ -55,8 +77,11 @@
       opacity: 0.4;
       border-radius: 50%;
       transition: background-color 0.5s;
+
+      @include max($md) {
+        width: 100px;
+        height: 100px;
+      }
     }
-
   }
-
 }

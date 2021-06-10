@@ -2,20 +2,24 @@ $(function(){
 $('.slider-shop__wrapper').slick({
 dots: true,
 arrows: false,
-speed: 1200,
-autoplay: true,
+// speed: 1200,
+// autoplay: true,
 
+});
+
+
+$('.header__button, .menu a').on('click', function(){
+$('.header__top').toggleClass('header__top--active');
+});
+
+$('.header__button, .menu a').on('click', function(){
+$('.header__button').toggleClass('header__button--active');
 });
 
 $('.partners__wrap').slick({
-dots: true,
+dots: false,
 arrows: false,
-speed: 1200,
 });
-
-
-
-
 
 var containerEl1 = document.querySelector('[data-ref="container-1"]');
   var containerEl2 = document.querySelector('[data-ref="container-2"]');

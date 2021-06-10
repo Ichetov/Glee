@@ -3,10 +3,22 @@
   justify-content: center;
   margin-bottom: 80px;
 
+  @include max($xl) {
+    margin-bottom: 10px;
+  }
+
+  @include max($md) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__list {
     &:not(:last-child) {
       margin-right: 28px;
+
+      @include max($md) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -25,16 +37,9 @@
     font-weight: $DMSans700;
     outline: transparent;
 
-    &:focus {
-      outline: 1px solid $red500;
-    }
-
-    &:hover {
-      color: $white900;
-    }
-
-    &:active {
-      color: $orange400;
+    @include max($md) {
+      padding-bottom: 10px;
+      font-size: 20px;
     }
   }
 
