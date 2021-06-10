@@ -1,25 +1,27 @@
+@import 'components/mixins';
 @import 'components/fonts';
 @import 'components/vars';
 @import 'components/reset';
 @import 'components/libs';
-@import 'components/global';
-@import 'components/mixin';
 @import 'components/article-card';
+@import 'components/card-product';
+@import 'components/header';
+@import 'components/news-blog';
+@import 'components/partners';
+@import 'components/footer';
+@import 'components/global';
 
 
 
-@import 'components/home-page/header';
+
 @import 'components/home-page/slider-shop';
 @import 'components/home-page/information';
 @import 'components/home-page/products-week';
-@import 'components/home-page/card-product';
 @import 'components/home-page/lamps-shop';
 @import 'components/home-page/products-filter';
 @import 'components/home-page/new-design';
 @import 'components/home-page/video-products';
-@import 'components/home-page/news-blog';
-@import 'components/home-page/partners';
-@import 'components/home-page/footer';
+
 
 
 

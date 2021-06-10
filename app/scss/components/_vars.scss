@@ -31,19 +31,10 @@ $Rubik:'Rubik', 'Aria', sans-serif;
 $Rubik500: 500;
 $Rubik400: 400;
 
-@function max($numbers...) {
-  @return m#{a}x(#{$numbers});
-}
 
-@function min($numbers...) {
-  @return m#{i}n(#{$numbers});
-}
+$xl:992;
+$md:765;
+$cm:320;
 
-@mixin line-clamp ($property) {
-  -webkit-line-clamp: $property;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
 
 

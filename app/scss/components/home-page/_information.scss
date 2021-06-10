@@ -3,6 +3,11 @@
   &__items {
     display: flex;
     background-color: $pink100;
+
+    @include max($md) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item {
@@ -10,8 +15,20 @@
     flex-grow: 1;
     justify-content: center;
 
+    @include max($xl) {
+      justify-content: flex-end;
+    }
+
+    @include max($cm) {
+      margin-left: 25px;
+    }
+
     &:not(:last-child) {
       border-right: 1px solid $white300;
+
+      @include max($md) {
+        border-right: 0;
+      }
     }
   }
 
@@ -20,14 +37,27 @@
     padding: 43px 0;
     position: relative;
 
+    @include max($xl) {
+      padding: 30px 0 20px;
+      width: 173px;
+    }
+
+    @include max($md) {
+      padding: 10px 0 10px;
+    }
+
     &::before {
       content: '';
       background-repeat: no-repeat;
       position: absolute;
       width: 55px;
       height: 55px;
-      left: -71px;
-      top: 55px;
+      left: -35%;
+      top: 32%;
+
+      @include max($xl) {
+        top: 24%;
+      }
     }
 
     &::after {
@@ -36,10 +66,14 @@
       height: 20px;
       position: absolute;
       background-color: $white200;
-      top: 88px;
-      left: -39px;
+      top: 49%;
+      left: -18%;
       border-radius: 50%;
       opacity: 0.3;
+
+      @include max($xl) {
+        display: none;
+      }
     }
 
     &--time {
@@ -73,6 +107,12 @@
   &__title {
     font-size: 18px;
     line-height: 2.2;
+
+    @include max($xl) {
+      line-height: 1;
+      width: 170px;
+      margin-bottom: 5px;
+    }
   }
 
   &__text {
@@ -80,6 +120,10 @@
     font-weight: $DMSans400;
     line-height: 1.9;
     @include line-clamp(2);
+
+    @include max($xl) {
+      line-height: 1.2;
+    }
   }
 
   &__icon-wrap::after {

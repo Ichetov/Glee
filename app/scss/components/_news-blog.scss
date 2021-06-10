@@ -3,29 +3,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 295px;
-  }
 
-  &__title {
-    margin: 0;
+    @include max($xl) {
+      margin-bottom: 15px;
+    }
+
+    @include max($md) {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
   }
 
   &__link {
     padding-right: 30px;
     position: relative;
     transition: color 0.4s;
-
-    &:hover {
-      color: $orange400;
-    }
-
-    &:focus {
-      outline: 1px solid $red500;
-    }
-
-    &:active {
-      color: $red500;
-    }
 
     &:hover:after {
       transform: translateX(30px);
@@ -44,25 +36,29 @@
     }
   }
 
-  &__bottom {
-    background-color: $pink100;
-    height: 436px;
-    display: flex;
-    flex-direction: column;
-  }
-
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 30px;
 
+    @include max($xl) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__inner {
     max-width: 370px;
-    margin-top: -250px;
+    margin-bottom: -173px;
     background-color: $white100;
+
+    @include max($xl) {
+      margin: 0 auto;
+    }
+
+    @include max($md) {
+      max-width: 293px;
+      margin-bottom: 10px;
+    }
   }
 
 }
-

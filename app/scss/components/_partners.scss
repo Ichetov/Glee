@@ -1,0 +1,60 @@
+.partners {
+  background-color: $pink100;
+  height: 400px;
+
+  @include max($xl) {
+    height: 180px;
+  }
+
+  @include max($md) {
+    height: 100px;
+  }
+
+  &__pic {
+    transition: transform 0.3s;
+    object-fit: contain;
+    max-width: 100%;
+    height: 100%;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    &:active {
+      color: $red500;
+    }
+
+    &:focus {
+      outline: 1px solid $red500;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 400px;
+    padding-bottom: 70px;
+
+    @include max($xl) {
+      height: 180px;
+      align-items: center;
+      padding: 0;
+    }
+
+    @include max($md) {
+      height: 100px;
+      padding: 0;
+    }
+
+  }
+
+  &__img {
+    max-width: 162px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+  }
+
+}

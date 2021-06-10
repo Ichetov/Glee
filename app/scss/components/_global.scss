@@ -53,17 +53,10 @@ body {
   width: 50px;
   height: 50px;
   outline: transparent;
-  background-color: $white100;
 
-  &:focus {
-    outline: 1px solid $red500;
-  }
-
-  &:active {
-    background-color: $orange400;
-  }
-  &:hover{
-    background-color: $blue900;
+  @include max($md) {
+    width: 38px;
+    height: 38px;
   }
 }
 
@@ -80,26 +73,30 @@ body {
   outline-color: transparent;
   display: inline-block;
 
+  @include max($md) {
+    padding: 12px 54px 11px 13px;
+  }
+
+  @include max($cm) {
+    padding: 7px 43px 7px 9px;
+  }
+
   &__arrow {
     width: 24px;
     height: 12px;
     position: absolute;
-    top: 25px;
-    right: 17px;
+    top: 37%;
+    right: 11%;
     fill: $white100;
     transition: fill .5s;
   }
 
-  &:active {
-    background-color: $orange400;
-  }
-
-  &:focus {
-    outline: 1px solid $red500;
-  }
-
   &:hover svg {
     fill: $white400;
+  }
+
+  &:active {
+    background-color: $red500;
   }
 
   &:hover {
@@ -114,4 +111,37 @@ body {
   font-size: 36px;
   color: $white900;
   @include line-clamp(1);
+
+  @include max($xl) {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+}
+
+a {
+  &:hover {
+    color: $yellow300;
+  }
+
+  &:active {
+    color: $orange400;
+  }
+
+  &:focus {
+    outline: 1px solid $red500;
+  }
+}
+
+button {
+  &:hover {
+    color: $yellow300;
+  }
+
+  &:active {
+    background-color: $orange400;
+  }
+
+  &:focus {
+    outline: 1px solid $red500;
+  }
 }

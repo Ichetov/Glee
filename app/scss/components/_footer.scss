@@ -7,44 +7,61 @@
     font-weight: $Rubik400;
     color: $white500;
     font-size: 14px;
+    flex-wrap: wrap;
+
+    @include max($xl) {
+      justify-content: space-between;
+      padding: 30px 0;
+    }
+
+    @include max($md) {
+      justify-content: center;
+      padding: 10px 0;
+    }
   }
 
   &__contacts {
     width: 200px;
     margin-right: 100px;
+
+    @include max($md) {
+      margin-right: 30px;
+    }
   }
 
   &__services {
     margin-right: 170px;
     width: 130px;
+
+    @include max($xl) {
+      margin-right: 50px;
+    }
+
+    @include max($md) {
+      margin-right: 30px;
+    }
   }
 
   &__account {
     margin-right: 200px;
     width: 95px;
+
+    @include max($xl) {
+      margin-right: 50px;
+    }
+
+    @include max($md) {
+      margin-right: 0;
+    }
   }
 
-  &__wrapper{
+  &__wrapper {
     display: flex;
   }
 
   &__link {
     transition: color .5s;
     outline-color: transparent;
-
-
-    &:focus {
-      outline: 1px solid $red500;
-    }
-
-    &:hover {
-      color: $yellow300;
-    }
-
-    &:active {
-      color: $orange400;
-    }
-
   }
 
   &__list {
@@ -56,10 +73,10 @@
 
   &__newsletter {
     width: 272px;
-  }
 
-  &__text {
-    margin-bottom: 40px;
+    @include max($md) {
+      width: 248px;
+    }
   }
 
   &__phone {
@@ -68,21 +85,10 @@
     margin-bottom: 20px;
     outline-color: transparent;
 
-    &:focus {
-      outline: 1px solid $red500;
-    }
-
-    &:active {
-      color: $orange400;
-    }
-
     & span {
       text-transform: uppercase;
     }
 
-    &:hover {
-      color: $yellow300;
-    }
   }
 
   &__mail {
@@ -90,21 +96,10 @@
     transition: color .5s;
     outline-color: transparent;
 
-    &:focus {
-      outline: 1px solid $red500;
-    }
-
     & span {
       text-transform: uppercase;
     }
 
-    &:active {
-      color: $orange400;
-    }
-
-    &:hover {
-      color: $yellow300;
-    }
   }
 
   &__adress {
@@ -115,26 +110,19 @@
     max-width: 240px;
     outline-color: transparent;
 
-    &:focus {
-      outline: 1px solid $red500;
-    }
-
     & span {
       text-transform: uppercase;
-    }
-
-    &:active {
-      color: $orange400;
-    }
-
-    &:hover {
-      color: $yellow300;
     }
   }
 
   &__text {
     line-height: 1.7;
     max-width: 240px;
+    margin-bottom: 40px;
+
+    @include max($md) {
+      margin-bottom: 5px;
+    }
   }
 
   &__logo {
@@ -152,6 +140,10 @@
     margin-bottom: 15px;
     font-size: 16px;
     @include line-clamp(1);
+
+    @include max($md) {
+      padding-top: 15px;
+    }
   }
 
   &__button {
@@ -169,18 +161,11 @@
     transition: background-color .5s, color .5s;
     outline-color: transparent;
 
-    &:focus {
-      outline: 1px solid $red500;
-    }
-
     &:hover {
       background-color: darken($blue300, 30%);
       color: darken($white100, 20%);
     }
 
-    &:active {
-      background-color: $orange400;
-    }
   }
 
   &__input {
@@ -191,6 +176,10 @@
     max-width: 164px;
     width: 100%;
 
+    @include max($md) {
+      max-width: 150px;
+    }
+
     &::placeholder {
       font-family: $DMSans;
       font-weight: $DMSans400;
@@ -198,7 +187,7 @@
       color: $blue700;
     }
 
-    &:active {
+    &:focus {
       background-color: $orange400;
     }
   }
@@ -221,7 +210,28 @@
 
 }
 
+.footer {
+  &__bottom {
+    @include max($md) {
+      flex-direction: column;
+      padding: 23px 0 25px;
+    }
+  }
+
+  &__copy {
+    @include max($md) {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+}
+
 .footer-menu {
+  display: flex;
+
+  @include max($md) {
+   justify-content: center;
+  }
 
   &__list {
     &:not(:last-child) {
@@ -234,17 +244,5 @@
   &__link {
     transition: color .4s;
     outline-color: transparent;
-
-    &:focus {
-      outline: 1px solid $red500;
-    }
-
-    &:hover {
-      color: $yellow300;
-    }
-
-    &:active {
-      color: $orange400;
-    }
   }
 }
