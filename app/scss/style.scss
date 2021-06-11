@@ -8,9 +8,9 @@
 @import 'components/header';
 @import 'components/news-blog';
 @import 'components/partners';
+@import 'components/card-lamps';
 @import 'components/footer';
 @import 'components/global';
-
 
 
 
@@ -28,3 +28,97 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+.product-shop {
+  padding: 110px 0;
+
+  &__inner {
+    display: flex
+  }
+
+  &__filters {
+    width: 275px
+  }
+}
+
+.product-shop {
+  &__label {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.irs--flat .irs-line {
+  top: 28px;
+  height: 3px;
+  background-color: #c2d2db;
+  border-radius: 0;
+}
+
+.irs--flat .irs-handle>i:first-child {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  margin-left: 0;
+  background-color: #a3bbc8;
+}
+
+.irs--flat .irs-handle.state_hover>i:first-child,
+.irs--flat .irs-handle:hover>i:first-child {
+  background-color: #a3bbc8;
+}
+
+.irs--flat .irs-bar {
+  top: 28px;
+  height: 4px;
+  background-color: #a3bbc8;
+}
+
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+  display: none;
+}
+
+.irs--flat {
+  margin-bottom: 16px;
+}
+
+
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+  display: none
+}
+
+.category {
+  &__label {
+    padding: 15px 0 15px 15px;
+  }
+
+  &__input {
+    &:checked+.category__checkbox {
+      
+      background-color: #edf1f4;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px 15px 15px;
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="icon" href="http://localhost:3000/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="http://localhost:3000/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  @include('./components/header.html')
+  <main class="main">
+    <div class="block-name">
+
+    </div>
+    <section class="product-shop">
+      <div class="container">
+        <div class="product-shop__inner">
+          <div class="product-shop__filters">
+            <article class="category">
+              <h3 class="category__title">
+                category
+              </h3>
+            </article>
+            <div class="product-shop__price">
+              <h3 class="product-shop__title">
+                price
+              </h3>
+              <form class="product-shop__form" action="#">
+                <input class="product-shop__input" type="text" data-min="0" data-max="1000" data-from="100"
+                  data-to="500">
+                <label class="product-shop__label">
+                  <p class="product-shop__wrap">
+                    $<span class="product-shop__from"></span>
+                  </p>
+                  <p class="product-shop__wrap">
+                    $<span class="product-shop__to"></span>
+                  </p>
+                </label>
+              </form>
+            </div>
+            <article class="category">
+              <h3 class="category__title">
+                category
+              </h3>
+              <form class="category__form" action="#">
+                <label class="category__label">
+                  <input class="category__input" type="checkbox">
+                  <div class="category__checkbox">
+                    <span>rfl</span>
+                    <span>(10)</span>
+                  </div>
+                </label>
+              </form>
+            </article>
+          </div>
+
+
+          <div class="product-shop__content">
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  @include('./components/footer.html')
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

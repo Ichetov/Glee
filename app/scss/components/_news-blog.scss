@@ -48,16 +48,15 @@
 
   &__inner {
     max-width: 370px;
-    margin-bottom: -173px;
+    margin-bottom: -170px;
     background-color: $white100;
 
     @include max($xl) {
-      margin: 0 auto;
+      margin: 0 auto 10px;
     }
 
     @include max($md) {
       max-width: 293px;
-      margin-bottom: 10px;
     }
   }
 

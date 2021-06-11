@@ -23,14 +23,9 @@
   }
 
   &__btn {
-    border: none;
-    padding: 0;
-    background-color: transparent;
     text-transform: uppercase;
-    cursor: pointer;
-    outline-color: transparent;
     text-transform: none;
-    transition: color .3s;
+    transition: color 0.3s;
     font-size: 16px;
     color: $white400;
     font-family: $DMSans;

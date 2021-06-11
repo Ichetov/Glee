@@ -17,7 +17,7 @@
     height: 100%;
 
     &:hover {
-      transform: translateY(-5px);
+      transform: translateX(-5px);
     }
 
     &:active {
@@ -29,9 +29,8 @@
     }
   }
 
-  &__item {
+  &__wrap {
     display: flex;
-    justify-content: space-around;
     align-items: flex-end;
     height: 400px;
     padding-bottom: 70px;
@@ -57,4 +56,9 @@
     padding: 0 5px;
   }
 
+}
+.slick-initialized .slick-slide {
+    display: block;
+    display: flex;
+    justify-content: space-around;
 }

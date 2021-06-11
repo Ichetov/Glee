@@ -18,21 +18,16 @@
     }
   }
 
-  &__wrapper {
+  &__card {
     padding: 15px 0 0 35px;
     background-color: $white700;
     height: 245px;
     transition: box-shadow 0.5s;
-
+    
     @include max($xl) {
-      height: 225px;
-      padding: 10px 0 0 0;
+      padding: 0;
+     padding-top: 5px;
     }
-
-    @include max($md) {
-      height: 190px;
-    }
-
     &:hover {
       box-shadow: 10px 6px 47px 20px rgba(37, 37, 37, 0.1);
     }
@@ -42,42 +37,26 @@
     position: relative;
     max-width: 355px;
     height: 160px;
+      top: -44px;
+    right: -69px;
 
     @include max($xl) {
       margin: 0 auto;
       padding: 0 10px;
       max-width: 355px;
-      height: 140px;
-    }
-  }
-
-  &__pendant {
-    top: -44px;
-    right: -69px;
-
-    @include max($xl) {
+      height: 122px;
       right: 0;
-      top: -6px;
+      top: 35px;
     }
   }
 
-  &__pieds {
-    top: -41px;
-    right: -64px;
-
-    @include max($xl) {
-      right: 0;
-      top: -6px;
-    }
-  }
-
-  &__rocking {
+  &--rocking {
     top: -64px;
     right: -58px;
 
     @include max($xl) {
       right: 0;
-      top: 0;
+      top: 10px;
     }
 
     @include max($md) {
@@ -85,17 +64,7 @@
     }
   }
 
-  &__bedstead {
-    top: -48px;
-    right: -66px;
-
-    @include max($xl) {
-      right: 0;
-      top: -6px;
-    }
-  }
-
-  &__chair {
+  &--chair {
     top: -68px;
     right: -62px;
 
@@ -106,16 +75,6 @@
 
     @include max($md) {
       height: 116px;
-    }
-  }
-
-  &__bamboo {
-    top: -50px;
-    right: -112px;
-
-    @include max($xl) {
-      right: 0;
-      top: -6px;
     }
   }
 
