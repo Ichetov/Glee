@@ -1,0 +1,111 @@
+  .card-lamps {
+    max-width: 870px;
+    background-color: $pink300;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0 80px;
+
+    @include max($xl) {
+      padding: 30px 8px;
+    }
+
+    @include max($md) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+  &__wrap {
+    padding: 85px 0 80px;
+
+    @include max($xl) {
+      padding: 35px 8px 35px
+    }
+ 
+    @include max($md) {
+      padding-top: 6px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__content {
+    max-width: 345px;
+
+    @include max($xl) {
+     max-width: 230px;
+    }
+  }
+  &__img {
+    margin-top: -195px;
+    margin-right: 50px;
+    max-width: 222px;
+    height: 400px;
+    padding-left: 10px;
+
+    @include max($xl) {
+    margin-top: 3px;
+    margin-right: 15px;
+    max-width: 222px;
+    height: 200px;
+    }
+
+    @include max($cm) {
+    height: 146px;
+    }
+  }
+
+  &__title {
+    font-size: 26px;
+    margin-bottom: 27px;
+    @include line-clamp(2);
+
+    @include max($xl) {
+      margin-bottom: 10px;
+      @include line-clamp(3);
+    }
+    @include max($md) {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__subject {
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    line-height: 1.8;
+    @include line-clamp(2);
+
+    @include max($xl) {
+      margin-bottom: 10px;
+      @include line-clamp(4);
+      line-height: 1.4;
+    }
+    @include max($md) {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    border: 1px solid $pink500;
+    border-radius: 5px;
+    color: $blue400;
+    background-color: $blue700;
+
+    &:hover .lamps-shop__arrov {
+      fill: white;
+    }
+  }
+
+  &__arrov {
+    fill: $blue400;
+  }
+
+  &__pic {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+}

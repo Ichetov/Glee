@@ -8,98 +8,13 @@
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 35px;
+    grid-column-gap: 10px;
 
     @include max($md) {
       grid-template-columns: repeat(1, 1fr);
       justify-content: center;
     }
   }
-
-  &__inner {
-    max-width: 870px;
-    background-color: $pink300;
-    display: flex;
-    justify-content: center;
-    padding: 100px 0 80px;
-
-    @include max($xl) {
-      padding: 30px 8px;
-    }
-
-    @include max($md) {
-      padding: 10px 8px;
-    }
-  }
-
-  &__wrap {
-    padding: 85px 0 80px;
-
-    @include max($xl) {
-      padding: 21px 8px 35px
-    }
-
-    @include max($md) {
-      padding: 6px 8px 20px;
-    }
-  }
-
-  &__content {
-    max-width: 345px;
-  }
-
-  &__img {
-    margin-top: -195px;
-    margin-right: 50px;
-    width: 222px;
-    height: 400px;
-    padding-left: 10px;
-
-    @include max($xl) {
-      display: none;
-    }
-  }
-
-  &__title {
-    font-size: 26px;
-    margin-bottom: 27px;
-    @include line-clamp(2);
-
-    @include max($md) {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-  }
-
-  &__subject {
-    margin-bottom: 5px;
-  }
-
-  &__text {
-    margin-bottom: 30px;
-    line-height: 1.8;
-    @include line-clamp(2);
-
-    @include max($md) {
-      margin-bottom: 10px;
-    }
-  }
-
-  &__link {
-    border: 1px solid $pink500;
-    border-radius: 5px;
-    color: $blue400;
-
-    &:hover .lamps-shop__arrov {
-      fill: white;
-    }
-  }
-
-  &__arrov {
-    fill: $blue400;
-  }
-
-  &__pic {
-    object-fit: contain;
-  }
 }
+
+
