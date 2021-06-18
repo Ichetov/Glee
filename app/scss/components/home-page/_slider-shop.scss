@@ -1,9 +1,7 @@
 .slider-shop {
-
   &__wrapper {
     background-color: $orange200;
     position: relative;
-    
   }
 
   &__inner {
@@ -17,7 +15,7 @@
     }
 
     @include max($md) {
-     height: 275px;
+      height: 275px;
       padding: 0;
     }
 
@@ -42,12 +40,12 @@
     height: 260px;
 
     @include max($md) {
-     width: 50%;
-     top: -27px;
+      width: 50%;
+      top: -27px;
     }
 
     &::before {
-      content: '';
+      content: "";
       border-radius: 50%;
       background-image: linear-gradient(88deg, rgba(255, 255, 255, 0), #fffcfa);
       position: absolute;
@@ -62,7 +60,6 @@
       z-index: -1;
 
       @include max($md) {
-    
       }
     }
   }
@@ -70,8 +67,8 @@
   &__content {
     margin-bottom: 50px;
     @include max($md) {
-    width: 50%;
-      }
+      width: 50%;
+    }
   }
 
   &__name {
@@ -98,7 +95,9 @@
       margin-bottom: 5px;
     }
   }
-
+  &__arrow {
+    fill: $white100;
+  }
   &__text p {
     font-size: 18px;
     font-family: $Rubik;
@@ -121,13 +120,14 @@
 
     @include max($md) {
       margin-bottom: 10px;
-         @include line-clamp(6);
+      @include line-clamp(6);
     }
   }
 
   &__link {
     display: inline-block;
     background-color: $blue300;
+    color: $white100;
   }
 
   .slick-dots {
@@ -137,9 +137,9 @@
     width: 100%;
     bottom: 42px;
 
-     @include max($md) {
-       bottom: 13px;
-     }
+    @include max($md) {
+      bottom: 13px;
+    }
 
     @include max($cm) {
       bottom: 10px;
@@ -157,7 +157,7 @@
       border: none;
       font-family: $Rubik;
       font-weight: $Rubik400;
-      transition: background-color .5s;
+      transition: background-color 0.5s;
 
       &:hover {
         background-color: $white100;
@@ -165,7 +165,6 @@
     }
 
     & li {
-
       &:not(:last-child) {
         margin-right: 10px;
       }
@@ -175,5 +174,4 @@
       background-color: $white100;
     }
   }
-
 }

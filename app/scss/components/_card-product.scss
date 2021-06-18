@@ -1,55 +1,60 @@
 .card-product {
-  padding: 25px 0 35px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  overflow: hidden;
+  align-items: center;
+  margin: 0 auto;
+  padding: 25px 15px 35px;
+  max-width: 270px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 20px #f8f8f8;
+  outline: 2px solid transparent;
+  border: 1px solid transparent;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  @include max($md) {
+    margin: 0 auto;
+  }
 
-  &:hover &__box {
-    opacity: 1;
+  &:hover {
+   box-shadow: 0px -1px 13px 9px rgba(34, 60, 80, 0.09);
+  }
+
+  &:hover {
+    .card-product__box {
+      opacity: 1;
+    }
   }
 
   &__img {
-    max-width: 250px;
-    height: 185px;
-    margin: 0 auto;
-
-    @include max($xl) {
-      height: 150px;
-    }
-
-    @include max($cm) {
-      height: 120px;
-    }
+    margin-bottom: auto;
+    padding: 33px 0 65px;
   }
 
   &__pic {
     margin: 0 auto;
     object-fit: contain;
-    width: 100%;
-    height: 100%;
-  }
-
-  &__inner {
-    position: relative;
-    transition: transform 0.6s;
-    margin-bottom: 60px;
-
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 
   &__box {
     position: absolute;
+    top: 50%;
+    left: 15%;
     display: flex;
-    width: 100%;
     justify-content: center;
-    bottom: 24px;
+    align-items: center;
     opacity: 0;
-    transition: opacity 0.3s;
-
+    transition: opacity 0.5s ease-in, transform 0.3s;
     @include max($xl) {
-    opacity: 1;
-  }
+      opacity: 1;
+    }
+
+    @include max($md) {
+      left: 25%;
+    }
   }
 
   &__btn,
@@ -68,6 +73,31 @@
       margin-right: 16px;
     }
   }
+  &__star,
+  &__descr,
+  &__hide-span {
+    display: none;
+  }
+
+  &__hide-span {
+    font-weight: 400;
+    font-size: 0px;
+    letter-spacing: 0.7;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &:focus {
+      outline-color: #fcd7b6;
+    }
+  }
 
   &__heart,
   &__cart,
@@ -78,17 +108,145 @@
 
   &__subject {
     font-weight: $DMSans500;
-    margin-bottom: 10px;
     color: $blue700;
-
+    margin-bottom: 13px;
     @include line-clamp(1);
-    margin: 0 auto;
     font-size: 16px;
   }
 
   &__num {
     color: $blue300;
   }
+  &__star,
+  &__figure {
+    display: none;
+  }
 
+  &--list {
+    height: 500px;
+    flex-direction: row;
+    min-width: 100%;
+    justify-content: flex-start;
+    padding: 0;
+    margin-bottom: 45px;
+    box-shadow: none;
 
+    @include max($xl) {
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+      height: auto;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .card-product__img {
+      width: 370px;
+      margin: 0;
+      align-self: normal;
+      padding: 80px 20px;
+      margin-right: 50px;
+      border: 1px solid #ccc;
+      background-color: #fefefe;
+      @include max($xl) {
+        margin-right: 0;
+      }
+    }
+
+    .card-product__figure {
+      display: block;
+      font-size: 30px;
+    }
+
+    .card-product__num {
+      display: none;
+    }
+    .card-product__pic {
+      height: 100%;
+      width: 100%;
+    }
+
+    .card-product__content {
+      max-width: 420px;
+      padding: 30px 0 40px;
+      text-align-last: left;
+
+      @include max($xl) {
+        text-align-last: center;
+      }
+    }
+
+    .card-product__subject {
+      font-size: 40px;
+
+      @include max($md) {
+        font-size: 35px;
+      }
+    }
+
+    .card-product__num {
+      margin-bottom: 17px;
+      font-size: 30px;
+      font-weight: 400;
+      color: #333333;
+    }
+
+    .card-product__descr {
+      font-size: 16px;
+      line-height: 1.9;
+      text-align: left;
+    }
+
+    .card-product__star,
+    .card-product__descr {
+      display: flex;
+      margin-bottom: 31px;
+    }
+    .card-product__star {
+      @include max($xl) {
+        margin: 0 auto;
+      }
+    }
+
+    .card-product__link--magnifier {
+      display: none;
+    }
+
+    .card-product__box {
+      opacity: 1;
+      transform: translateY(0);
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      left: 0;
+      display: flex;
+      justify-content: start;
+    }
+
+    .btn-circle {
+      border-radius: 0;
+    }
+
+    .card-product__btn--cart {
+      background-color: #a3bbc8;
+      transition: width 0.1s;
+      &:hover {
+        width: 150px;
+        border-radius: 5px;
+        border: none;
+        background-color: #a3bbc8;
+
+        .card-product__cart--cart {
+          display: none;
+        }
+
+        .card-product__hide-span {
+          display: inline-flex;
+          font-size: 15px;
+        }
+      }
+    }
+    .card-product__cart--cart {
+      fill: #fff;
+    }
+  }
 }
