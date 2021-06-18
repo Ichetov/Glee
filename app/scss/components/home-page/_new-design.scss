@@ -6,39 +6,61 @@
   }
 
   &__content {
-    display: grid;
+       display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px 35px;
-    margin-bottom: 120px;
+    grid-gap: 35px 30px;
+    margin-bottom: 106px;
 
     @include max($xl) {
-      grid-template-columns: repeat(2, 3fr);
-      grid-gap: 10px 10px;
-      margin-bottom: 50px;
+     grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 30px;
+    }
+
+    @include max($ml) {
+     grid-template-columns: repeat(1, 1fr);
+      margin-bottom: 30px;
     }
   }
+}
+.design-card {
+  padding: 35px 0 0 35px;
+  align-items: flex-start;
+  justify-content: start;
+  max-width: 370px;
+  padding: 30px 0 40px 40px;
+  background-color: #f8f8f8;
+  box-shadow: none;
+  transition: transform 0.3s, box-shadow 0.2s;
+  overflow: hidden;
 
-  &__card {
-    padding: 15px 0 0 35px;
-    background-color: $white700;
-    height: 245px;
-    transition: box-shadow 0.5s;
-    
-    @include max($xl) {
-      padding: 0;
-     padding-top: 5px;
-    }
-    &:hover {
-      box-shadow: 10px 6px 47px 20px rgba(37, 37, 37, 0.1);
-    }
+  &:hover {
+    transform: translateY(-3px);
   }
 
+  &:hover .design-card__link {
+    opacity: 0.4;
+    box-shadow: 0 0 10px #a3bbc8;
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.7s, box-shadow 0.2s;
+  }
   &__img {
-    position: relative;
-    max-width: 355px;
-    height: 160px;
-      top: -44px;
-    right: -69px;
+    position: absolute;
+    right: -58px;
+    bottom: 42px;
+    max-width: 270px;
+    max-height: 200px;
+    &--chair {
+      right: 7px;
+    }
 
     @include max($xl) {
       margin: 0 auto;
@@ -46,35 +68,7 @@
       max-width: 355px;
       height: 122px;
       right: 0;
-      top: 35px;
-    }
-  }
-
-  &--rocking {
-    top: -64px;
-    right: -58px;
-
-    @include max($xl) {
-      right: 0;
-      top: 10px;
-    }
-
-    @include max($md) {
-      height: 116px;
-    }
-  }
-
-  &--chair {
-    top: -68px;
-    right: -62px;
-
-    @include max($xl) {
-      right: 0;
-      top: 0;
-    }
-
-    @include max($md) {
-      height: 116px;
+      bottom: 0;
     }
   }
 
@@ -84,31 +78,28 @@
     height: 100%;
   }
 
-  &__wrap {
-    width: 171px;
+  &__subject {
+    position: relative;
+    display: inline-block;
     text-align: left;
-
+    max-width: 180px;
+    margin-bottom: 10px;
+    z-index: 6;
+    line-height: 1.2;
+    font-size: 20px;
+    color: #1a1a1a;
+    transition: color 0.2s ease-in;
     @include max($xl) {
-      width: 100%;
       text-align: center;
     }
   }
-
-  &__subject {
-    font-size: 20px;
-    color: $white900;
-    margin-bottom: 16px;
-    @include line-clamp(2);
-    font-weight: $DMSans700;
-
-    @include max($md) {
-      font-size: 17px;
-      margin-bottom: 0;
-    }
+  &__num {
+    padding-bottom: 95px;
+    display: block;
+    position: relative;
+    max-width: 100px;
+    z-index: 6;
+    font-size: 16px;
+    transition: color 0.2s ease-in;
   }
-
-  &__text {
-    color: $blue300;
-  }
-
 }

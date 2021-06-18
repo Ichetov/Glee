@@ -1,124 +1,28 @@
-@import 'components/mixins';
-@import 'components/fonts';
-@import 'components/vars';
-@import 'components/reset';
-@import 'components/libs';
-@import 'components/article-card';
-@import 'components/card-product';
-@import 'components/header';
-@import 'components/news-blog';
-@import 'components/partners';
-@import 'components/card-lamps';
-@import 'components/footer';
-@import 'components/global';
+@import "components/mixins";
+@import "components/fonts";
+@import "components/vars";
+@import "components/reset";
+@import "components/libs";
+@import "components/article-card";
+@import "components/card-product";
+@import "components/header";
+@import "components/news-blog";
+@import "components/partners";
+@import "components/card-lamps";
+@import "components/filters-category";
+@import "components/breadcrumbs";
+@import "components/filters-category";
+@import "components/footer";
+@import "components/global";
 
+@import "components/home-page/slider-shop";
+@import "components/home-page/information";
+@import "components/home-page/products-week";
+@import "components/home-page/lamps-shop";
+@import "components/home-page/products-filter";
+@import "components/home-page/new-design";
+@import "components/home-page/video-products";
 
-
-@import 'components/home-page/slider-shop';
-@import 'components/home-page/information';
-@import 'components/home-page/products-week';
-@import 'components/home-page/lamps-shop';
-@import 'components/home-page/products-filter';
-@import 'components/home-page/new-design';
-@import 'components/home-page/video-products';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.product-shop {
-  padding: 110px 0;
-
-  &__inner {
-    display: flex
-  }
-
-  &__filters {
-    width: 275px
-  }
-}
-
-.product-shop {
-  &__label {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-.irs--flat .irs-line {
-  top: 28px;
-  height: 3px;
-  background-color: #c2d2db;
-  border-radius: 0;
-}
-
-.irs--flat .irs-handle>i:first-child {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 16px;
-  height: 16px;
-  margin-left: 0;
-  background-color: #a3bbc8;
-}
-
-.irs--flat .irs-handle.state_hover>i:first-child,
-.irs--flat .irs-handle:hover>i:first-child {
-  background-color: #a3bbc8;
-}
-
-.irs--flat .irs-bar {
-  top: 28px;
-  height: 4px;
-  background-color: #a3bbc8;
-}
-
-.irs--flat .irs-from,
-.irs--flat .irs-to,
-.irs--flat .irs-single {
-  display: none;
-}
-
-.irs--flat {
-  margin-bottom: 16px;
-}
-
-
-.irs--flat .irs-min,
-.irs--flat .irs-max {
-  display: none
-}
-
-.category {
-  &__label {
-    padding: 15px 0 15px 15px;
-  }
-
-  &__input {
-    &:checked+.category__checkbox {
-      
-      background-color: #edf1f4;
-    }
-  }
-
-  &__checkbox {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 25px 15px 15px;
-  }
-}
+@import "components/product-list/shop";
+@import "components/product-list/shop-content";
+@import "components/product-list/filters";

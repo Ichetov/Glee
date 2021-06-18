@@ -1,0 +1,66 @@
+.shop-content {
+  max-width: 870px;
+  width: 100%;
+  @include max($xxl) {
+    margin: 0 auto;
+  }
+  &__filter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  &__button {
+    fill: #8d8d8d;
+    &:hover{
+       fill:#fe3e57;
+    }
+    &.shop-content__button--active {
+      fill: #fe3e57;
+    }
+  }
+  &__card {
+    margin-right: 20px;
+  }
+  &__grid {
+    width: 15px;
+    height: 15px;
+  }
+
+  &__list {
+    width: 22px;
+    height: 15px;
+  }
+
+  &__items {
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include max($xl) {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include max($md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+      @include max($ml) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    li {
+      margin-bottom: 37px;
+      @include max($xl) {
+        margin-bottom: 0;
+      }
+    }
+    &--list {
+      display: block;
+      .shop-content__item--none {
+        display: none;
+      }
+    }
+  }
+}

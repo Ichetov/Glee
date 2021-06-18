@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glee</title>
+  <title>Product-list</title>
   <link rel="icon" href="http://localhost:3000/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="http://localhost:3000/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
@@ -13,14 +13,22 @@
 
 <body>
   @include('./components/header.html')
-  <main class="main">
-    @include('./components/home-page/slider-shop.html')
-    @include('./components/home-page/products.html')
-    @include('./components/home-page/new-design.html')
-    @include('./components/home-page/news-blog.html')
-  </main>
+  @include('./components/breadcrumbs.html')
+  <section class="shop">
+    <div class="container">
+      <div class="shop__inner">
+        @include('./components/product-list/filters.html')
+        <main class="main">
+          <div class="shop-content">
+            @include('./components/product-list/shop-content__filter.html')
+            @include('./components/product-list/shop-content__items.html')
+            @include('./components/pagination.html')
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
   @include('./components/footer.html')
-
   <script src="js/main.min.js"></script>
 </body>
 
