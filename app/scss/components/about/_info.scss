@@ -1,0 +1,75 @@
+.info {
+  background-color: $orange200;
+  padding-top: 80px;
+  margin-bottom: 110px;
+  @include max($xl) {
+    margin-bottom: 20px;
+  }
+  @include max($xl) {
+    padding-top: 23px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px 0 40px;
+    @include max($xl) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px 10px;
+      padding: 0 70px 0 40px;
+    }
+    @include max($ml) {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 0 75px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    position: relative;
+    @include max($xl) {
+      padding: 65px 0 10px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      background-color: $blue300;
+      border-radius: 50%;
+      opacity: 0.7;
+      top: 24px;
+      right: 36px;
+      @include max($xl) {
+        display: none;
+      }
+    }
+
+    &--rate {
+      background-image: url(../images/about/rate.svg);
+    }
+    &--delivered {
+      background-image: url(../images/about/delivered.svg);
+    }
+    &--time {
+      background-image: url(../images/about/time.svg);
+    }
+    &--store {
+      background-image: url(../images/about/store.svg);
+    }
+  }
+  &__num {
+    font-size: 36px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+  }
+  &__text {
+    font-size: 18px;
+  }
+}
