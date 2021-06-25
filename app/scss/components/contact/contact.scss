@@ -1,0 +1,150 @@
+.contact {
+  &__top {
+    text-align: center;
+    margin-bottom: 115px;
+    @include max($xxl) {
+      margin-bottom: 30px;
+    }
+  }
+  &__headline {
+    font-family: $Poppins;
+    color: $blue300;
+    margin-bottom: 8px;
+  }
+  &__title {
+    font-size: 35px;
+    color: $blue400;
+    margin-bottom: 60px;
+    @include max($xxl) {
+      margin-bottom: 10px;
+    }
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 375px;
+    width: 100%;
+    padding: 74px 48px;
+    background-color: $pink700;
+    position: relative;
+    border: 2px solid transparent;
+    transition: border-color 0.6s;
+    &:hover {
+      border-color: $orange300;
+    }
+    &:hover .contact__pic {
+      fill: $white100;
+    }
+    &:hover .contact__link {
+      background-color: $orange300;
+    }
+    @include max($xxl) {
+      margin-bottom: 15px;
+    }
+    @include max($md) {
+      padding: 20px 5px;
+    }
+  }
+  &__items {
+    @include max($xxl) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__pic {
+    width: 48px;
+    height: 48px;
+    fill: $orange300;
+    transition: fill 0.5s;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 65px;
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
+    border: none;
+    background-color: $white100;
+    transition: background-color 0.5s;
+  }
+  &__caption {
+    color: $white900;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  span {
+    display: block;
+    margin-bottom: 10px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  &__form {
+    max-width: 620px;
+    width: 100%;
+    margin-right: 50px;
+    margin-bottom: 0;
+    @include max($xl) {
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+
+    input,
+    textarea {
+      text-transform: uppercase;
+    }
+  }
+  &__bottom {
+    display: flex;
+    margin-bottom: 65px;
+    @include max($xl) {
+      display: block;
+    }
+  }
+  &__form-item {
+    @include max($xl) {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__form-info {
+    @include max($xl) {
+      display: block;
+    }
+  }
+  &__form-comment {
+    height: 180px;
+    margin-bottom: 28px;
+    background-position-x: 97%;
+    background-position-y: 9%;
+    @include max($xl) {
+      margin-bottom: 10px;
+    }
+     @include max($md) {
+      background-position-x: 94%;
+    }
+  }
+  &__map {
+    max-width: 500px;
+    width: 100%;
+    overflow: hidden;
+    @include max($xl) {
+      margin: 0 auto;
+    }
+  }
+}
+
+#map {
+  width: 100%;
+  height: 330px;
+}

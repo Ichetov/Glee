@@ -145,7 +145,7 @@ button {
 
 .pagination {
   padding: 75px 0 110px;
-   @include max($xl) {
+  @include max($xl) {
     padding: 50px 0 0px;
   }
   &__list {
@@ -168,5 +168,102 @@ button {
     &:hover {
       background-color: #a3bbc8;
     }
+  }
+}
+
+.contact-form {
+  &__information {
+    margin-bottom: 20px;
+    display: flex;
+    @include max($ml) {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+  }
+  &__item {
+    max-width: 400px;
+    width: 100%;
+    &:not(:last-child) {
+      margin-right: 30px;
+      @include max($xl) {
+        margin-right: 5px;
+      }
+    }
+    @include max($ml) {
+      margin-bottom: 10px;
+      max-width: 100%;
+    }
+  }
+  &__label {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 30px;
+      top: 3px;
+      right: 7px;
+      background-repeat: no-repeat;
+    }
+
+    &--name {
+      &::after {
+        background-image: url(../images/icons/name.svg);
+      }
+    }
+
+    &--email {
+      &::after {
+        background-image: url(../images/icons/mail.svg);
+      }
+    }
+  }
+  &__input {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    border: 1px solid #e5e5e5;
+  }
+  &__comment {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 32px;
+    resize: none;
+    position: relative;
+    background-image: url(../images/icons/letter.svg);
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 20%;
+    border: 1px solid #e5e5e5;
+    @include max($xl) {
+      margin-bottom: 15px;
+    }
+  }
+  &__input,
+  &__comment {
+    padding: 10px 40px 10px 17px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: $orange200;
+    }
+
+    &:focus,
+    &:active {
+      outline: transparent;
+      border: 1px solid $blue700;
+    }
+  }
+
+  &__btn {
+    padding: 15px 35px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background-color: $blue300;
+    color: $white100;
   }
 }

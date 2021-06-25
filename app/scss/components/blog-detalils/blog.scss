@@ -1,0 +1,168 @@
+.blog {
+  &__inner {
+    display: flex;
+  }
+  &__filters {
+    order: 2;
+    width: 270px;
+    border: none;
+    @include max($xxl) {
+      width: 100%;
+    }
+  }
+  &__wrap {
+    max-width: 830px;
+    width: 100%;
+    margin-right: 70px;
+    @include max($xxl) {
+      margin: 0 auto;
+    }
+    @include max($md) {
+      max-width: 95vw;
+    }
+  }
+
+  &__number {
+    display: flex;
+    justify-content: flex-start;
+    @include max($xxl) {
+      justify-content: center;
+    }
+    @include max($xl) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__item {
+    padding: 100px 0;
+    @include max($xl) {
+      padding: 20px 0;
+    }
+  }
+
+  &__category {
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    padding: 19px 93px 19px 25px;
+    border: 1px solid $blue300;
+    color: $blue300;
+    margin-bottom: 40px;
+    @include max($xl) {
+      margin-bottom: 10px;
+    }
+    @include max($md) {
+      padding: 8px 50px 9px 10px;
+    }
+
+    &:hover .blog__arrow {
+      fill: $yellow300;
+    }
+  }
+  &__arrow {
+    fill: $blue300;
+  }
+
+  &__images {
+    position: relative;
+    margin-bottom: 25px;
+    max-height: 70vh;
+    overflow: hidden;
+    @include max($md) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__date {
+    &:before {
+      background-image: url(../images/icons/cord.svg);
+    }
+  }
+
+  &__author {
+    &:before {
+      background-image: url(../images/icons/test.svg);
+    }
+  }
+
+  &__info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 20px 23px;
+    background-color: #a3bbc8;
+    color: $white100;
+    border-top: none;
+    @include max($ml) {
+      padding: 5px 3px;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+    color: #333333;
+    font-size: 36px;
+    text-align: left;
+    font-weight: $Rubik400;
+    @include max($xxl) {
+      text-align: center;
+      @include line-clamp(3);
+      margin-bottom: 10px;
+    }
+    @include max($md) {
+      text-align: center;
+      font-size: 25px;
+    }
+  }
+  &__box {
+    font-family: $Rubik;
+    font-weight: $Rubik400;
+    color: $blue700;
+    margin-bottom: 35px;
+    @include max($xxl) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    font-weight: $Rubik500;
+    margin-bottom: 20px;
+    @include max($xxl) {
+      margin-bottom: 5px;
+    }
+  }
+  &__blockquote {
+    padding: 35px 90px 35px 32px;
+    font-family: $Rubik;
+    font-weight: $Rubik400;
+    background-color: #edf1f4;
+    border-left: 7px solid $blue300;
+    margin-bottom: 40px;
+    @include max($xxl) {
+      padding: 10px 5px 12px 16px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 25px;
+      @include max($md) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__cite {
+    font-style: normal;
+    padding-left: 45px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 4px;
+      background-color: $blue300;
+      left: 0;
+      top: 10px;
+    }
+  }
+}

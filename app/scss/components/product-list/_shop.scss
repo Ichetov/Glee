@@ -10,22 +10,23 @@
     min-width: 270px;
     margin-right: 35px;
   }
-&__img{
-  width: 30px;
-  height: 30px;
+  
 }
-  &__btn {
-    display: none;
-    @include max($xxl) {
-      display: block;
-      border: none;
-      position: fixed;
-      width: 50px;
-      height: 50px;
-      background-color: $orange400;
-      right: 0;
-      z-index: 47;
-      bottom: 50px;
-    }
+.shop-btn {
+  display: none;
+  @include max($xxl) {
+    display: block;
+    border: none;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: $orange400;
+    right: 0;
+    z-index: 47;
+    bottom: 50px;
+  }
+  &__img {
+    width: 30px;
+    height: 30px;
   }
 }

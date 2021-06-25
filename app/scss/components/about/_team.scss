@@ -24,9 +24,13 @@
     }
   }
   &__text {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    line-height: 2;
+    font-family: $Rubik;
+    font-weight: $Rubik400;
     @include max($xl) {
       margin-bottom: 10px;
+      line-height: 1.5;
     }
   }
   &__google,
