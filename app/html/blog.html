@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glee</title>
+  <link rel="icon" href="http://localhost:3000/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="http://localhost:3000/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  @include('./components/header.html')
+  <div class="breadcrumbs">
+    <div class="breadcrumbs__inner">
+      <h1 class="breadcrumbs__title">Blog</h1>
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Home</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__span">Blog</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <section class="blog">
+    <div class="container">
+      <div class="blog__inner">
+        @include('./components/blog/blog-filters.html')
+        <button class="shop-btn">
+          <svg class="shop-btn__img">
+            <use xlink:href="images/sprite.svg#filter-solid"></use>
+          </svg>
+        </button>
+        <main class="main">
+          <h1 class="blog sr-only">this is blog</h1>
+          <div class="blog__wrap">
+            <article class="blog__article blog-one">
+              <div class="blog__images blog-one__images">
+                <img class="blog__img" src="./images/blog/dizayn.jpg" alt="blog images">
+                <div class="work blog__info">
+                  <time class="work__date blog__date" datetime="2020-01-28">
+                    28 january, 2020
+                  </time>
+                  <a class="work__author blog__author" href="#">
+                    <span class="sr-only">when you click on it, you will go to the author's page</span>
+                    by admin
+                  </a>
+                </div>
+              </div>
+              <h2 class="blog__title title">Fonsectetur adipisicing eiusmod</h2>
+              <div class="blog__box">
+                <p>
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit
+                  amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                </p>
+              </div>
+              <a class="btn-link blog__link" href="#">
+                View More
+                <svg class="btn-link__arrow blog__arrow">
+                  <use xlink:href="images/sprite.svg#arrow"></use>
+                </svg>
+              </a>
+            </article>
+            <article class="blog__article blog-one">
+              <div class="blog__images blog-one__images">
+                <img class="blog__img" src="./images/blog/elit.jpg" alt="blog images">
+                <div class="work blog__info">
+                  <time class="work__date blog__date" datetime="2020-01-28">
+                    28 january, 2020
+                  </time>
+                  <a class="work__author blog__author" href="#">
+                    <span class="sr-only">when you click on it, you will go to the author's page</span>
+                    by admin
+                  </a>
+                </div>
+              </div>
+              <h2 class="blog__title title">Fonsectetur adipisicing elit,</h2>
+              <div class="blog__box">
+                <p>
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit
+                  amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                </p>
+              </div>
+              <a class="btn-link blog__link" href="#">
+                View More
+                <svg class="btn-link__arrow blog__arrow">
+                  <use xlink:href="images/sprite.svg#arrow"></use>
+                </svg>
+              </a>
+            </article>
+            <article class="blog__article blog-one">
+              <div class="blog__images blog-one__images">
+                <img class="blog__img" src="./images/blog/incididunt.jpg" alt="blog images">
+                <div class="work blog__info">
+                  <time class="work__date blog__date" datetime="2020-01-28">
+                    28 january, 2020
+                  </time>
+                  <a class="work__author blog__author" href="#">
+                    <span class="sr-only">when you click on it, you will go to the author's page</span>
+                    by admin
+                  </a>
+                </div>
+              </div>
+              <h2 class="blog__title title">Fsectetur adipisicing tempor incididunt</h2>
+              <div class="blog__box">
+                <p>
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit
+                  amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                </p>
+              </div>
+              <a class="btn-link blog__link" href="#">
+                View More
+                <svg class="btn-link__arrow blog__arrow">
+                  <use xlink:href="images/sprite.svg#arrow"></use>
+                </svg>
+              </a>
+            </article>
+            <article class="blog__article blog-one">
+              <div class="blog__images blog-one__images">
+                <img class="blog__img" src="./images/blog/vonsectetur.jpg" alt="blog images">
+                <div class="work blog__info">
+                  <time class="work__date blog__date" datetime="2020-01-28">
+                    28 january, 2020
+                  </time>
+                  <a class="work__author blog__author" href="#">
+                    <span class="sr-only">when you click on it, you will go to the author's page</span>
+                    by admin
+                  </a>
+                </div>
+              </div>
+              <h2 class="blog__title title">vonsectetur adipisicing elit</h2>
+              <div class="blog__box">
+                <p>
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit
+                  amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                </p>
+              </div>
+              <a class="btn-link blog__link" href="#">
+                View More
+                <svg class="btn-link__arrow blog__arrow">
+                  <use xlink:href="images/sprite.svg#arrow"></use>
+                </svg>
+              </a>
+            </article>
+          </div>
+          <div class="pagination">
+            <ul class="pagination__list blog__number">
+              <li class="pagination__item">
+                <span class="pagination__btn pagination__btn--active">1</span>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__btn" href="#">2</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__btn" href="#">3</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__btn" href="#">Next</a>
+              </li>
+            </ul>
+          </div>
+        </main>
+      </div>
+    </div>
+    @include('./components/home-page/partners.html')
+  </section>
+  @include('./components/footer.html')
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -86,33 +86,418 @@
       </nav>
   </div>
 </header>
-
-  <main class="main">
-    <div class="breadcrumbs">
-      <div class="breadcrumbs__inner">
-        <h1 class="breadcrumbs__title">Blog Detalis</h1>
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Home</a>
-          </li>
+  <div class="breadcrumbs">
+    <div class="breadcrumbs__inner">
+      <h1 class="breadcrumbs__title">Blog Detalis</h1>
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Home</a>
+        </li>
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="#">Blog</a>
         </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Blog detalis</a>
-          </li>
-        </ul>
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__span">Blog detalis</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <section class="blog">
+    <div class="container">
+      <div class="blog__inner">
+        <ul class="filters blog__filters">
+  <li class="filters__item filters-search">
+    <form class="filters-search__form" action="#">
+      <input class="filters-search__input" type="text">
+      <button class="filters-search__btn" type="submit">
+        <svg class="filters-search__pic">
+          <use xlink:href="images/sprite.svg#searchtwo"></use>
+        </svg>
+      </button>
+    </form>
+  </li>
+  <li class="filters__item filters-category blog__category">
+    <aside class="aside">
+      <h2 class="filters__title">
+        category
+      </h2>
+      <form class="filters-category__form" action="#">
+        <label class="filters-category__label">
+          <input class="filters-category__input check-input" type="checkbox" checked>
+          <div class="filters-category__checkbox check-wrap">
+            <span class="filters-category__num"> Chair</span>
+          </div>
+        </label>
+        <label class="filters-category__label">
+          <input class="filters-category__input check-input" type="checkbox">
+          <div class="filters-category__checkbox check-wrap">
+            <span class="filters-category__num"> Table</span>
+          </div>
+        </label>
+        <label class="filters-category__label">
+          <input class="filters-category__input check-input" type="checkbox">
+          <div class="filters-category__checkbox check-wrap">
+            <span class="filters-category__num"> Lamp</span>
+          </div>
+        </label>
+        <label class="filters-category__label">
+          <input class="filters-category__input check-input" type="checkbox">
+          <div class="filters-category__checkbox check-wrap">
+            <span class="filters-category__num"> Watch</span>
+          </div>
+        </label>
+        <label class="filters-category__label">
+          <input class="filters-category__input check-input" type="checkbox">
+          <div class="filters-category__checkbox check-wrap">
+            <span class="filters-category__num"> Clock</span>
+          </div>
+        </label>
+      </form>
+    </aside>
+  </li>
+  <li class="filters__item filters-recent">
+    <aside class="aside">
+      <h2 class="filters__title filters-recent__title">
+        resent posts
+      </h2>
+      <ul class="filters-recent__items blog-filtres">
+        <li class="filters-recent__item">
+          <div class="filters-recent__img blog-filtres__img">
+            <a class="filters-recent__link" href="#">
+              <img class="filters-recent__pic blog-filtres__pic" src="images/blog/1.jpg" alt="">
+            </a>
+          </div>
+          <div class="filters-recent__content blog-filtres__content">
+            <h4 class="filters-recent__name blog-filtres__name">
+              Corem ipsum dolor tetur adipisicing elit
+            </h4>
+            <time class="article-card__date blog-filtres__date" datetime="2020-01-28">
+              28 january, 2020
+            </time>
+          </div>
+        </li>
+        <li class="filters-recent__item">
+          <div class="filters-recent__img blog-filtres__img">
+            <a class="filters-recent__link" href="#">
+              <img class="filters-recent__pic blog-filtres__pic" src="images/blog/2.jpg" alt="">
+            </a>
+          </div>
+          <div class="filters-recent__content blog-filtres__content">
+            <h4 class="filters-recent__name blog-filtres__name">
+              Fdipisicing elit, sed do eiusmod tempor
+            </h4>
+            <time class="article-card__date blog-filtres__date" datetime="2020-01-28">
+              28 january, 2020
+            </time>
+          </div>
+        </li>
+        <li class="filters-recent__item">
+          <div class="filters-recent__img blog-filtres__img">
+            <a class="filters-recent__link" href="#">
+              <img class="filters-recent__pic blog-filtres__pic" src="images/blog/3.jpg" alt="">
+            </a>
+          </div>
+          <div class="filters-recent__content blog-filtres__content">
+            <h4 class="filters-recent__name blog-filtres__name">
+              Eonsectetur adipisicing elit, sed do eiusmod
+            </h4>
+            <time class="article-card__date blog-filtres__date" datetime="2020-01-28">
+              28 january, 2020
+            </time>
+          </div>
+        </li>
+        <li class="filters-recent__item">
+          <div class="filters-recent__img blog-filtres__img">
+            <a class="filters-recent__link" href="#">
+              <img class="filters-recent__pic blog-filtres__pic" src="images/blog/4.jpg" alt="">
+            </a>
+          </div>
+          <div class="filters-recent__content blog-filtres__content">
+            <h4 class="filters-recent__name blog-filtres__name">
+              gnim ad minim veniam, quis nostrud
+            </h4>
+            <time class="article-card__date blog-filtres__date" datetime="2020-01-28">
+              28 january, 2020
+            </time>
+          </div>
+        </li>
+      </ul>
+    </aside>
+  </li>
+</ul>
+        <button class="shop-btn">
+          <svg class="shop-btn__img">
+            <use xlink:href="images/sprite.svg#filter-solid"></use>
+          </svg>
+        </button>
+        <main class="main">
+          <h1 class="blog sr-only">this is blog details</h1>
+          <div class="blog__wrap">
+            <article class="blog__article blog-one">
+              <div class="blog__images blog-one__images">
+                <img class="blog__img" src="./images/blog/dizayn.jpg" alt="blog images">
+                <div class="work blog__info">
+                  <time class="work__date blog__date" datetime="2020-01-28">
+                    28 january, 2020
+                  </time>
+                  <a class="work__author blog__author" href="#">
+                    <span class="sr-only">when you click on it, you will go to the author's page</span>
+                    by admin
+                  </a>
+                </div>
+              </div>
+              <h2 class="blog__title title">Fonsectetur adipisicing eiusmod</h2>
+              <div class="blog__box">
+                <p class="blog__text">
+                  Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                  minim venia Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                </p>
+                <p>
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit
+                  amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                  fugiat nulla pariatur.
+                </p>
+              </div>
+              <blockquote class="blog__blockquote">
+                <p>
+                  Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                </p>
+                <cite class="blog__cite">Wiusmod tempor</cite>
+              </blockquote>
+
+              <div class="blog-one__wrap">
+                <div class="blog-one__pic">
+                  <img class="blog-one__images" src="./images/blog/blog.jpg" alt="blog pic">
+                </div>
+                <div class="blog-one__content">
+                  <h3 class="blog-one__title">Riusmod tempor incididunt </h3>
+                  <div class="blog-one__text">
+                    <p>
+                      consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="blog-one__content">
+                <h3 class="blog-one__title">Kajtsal jervcm eoaspckred</h3>
+                <div class="blog-one__text">
+                  <p>
+                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </div>
+            </article>
+            <div class="blog__designer designer">
+  <div class="designer__wrapper">
+    <div class="designer__photo">
+      <img class="designer__img" src="images/designer/mark.jpg" alt="photo of the designer">
+    </div>
+    <div class="designer__content">
+      <a class="designer__name" href="#">Mark N. Hernandez</a>
+      <span class="designer__profession">Designer</span>
+    </div>
+  </div>
+  <div class="designer__social">
+    <div class="designer__top">
+      <span class="designer__decr">Tags: </span>
+      <ul class="designer__list">
+        <li class="designer__item ">
+          <a class="designer__link" href="#">All, </a>
+        </li>
+        <li class="designer__item">
+          <a class="designer__link" href="#">Trending</a>
+        </li>
+      </ul>
+    </div>
+    <div class="designer__bottom">
+      <span class="designer__decr">Share: </span>
+      <ul class="designer__list">
+        <li class="designer__item">
+          <a class="designer__link" href="#">
+            <svg class="designer__pic">
+              <use xlink:href="images/sprite.svg#designer-face"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="designer__item">
+          <a class="designer__link" href="#">
+            <svg class="designer__pic">
+              <use xlink:href="images/sprite.svg#designer-twit"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="designer__item">
+          <a class="designer__link" href="#">
+            <svg class="designer__pic">
+              <use xlink:href="images/sprite.svg#designer-inst"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="designer__item">
+          <a class="designer__link" href="#">
+            <svg class="designer__pic">
+              <use xlink:href="images/sprite.svg#designer-go"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+            <div class="comments">
+  <h3 class="comments__title">
+    <span class="comments__num">3 </span>Comments
+  </h3>
+  <div class="comments__wrapper">
+    <div class="comments__images">
+      <a class="comments__photo" href="#">
+        <img class="comments__img" src="./images/comments/1.jpg" alt="photo">
+      </a>
+    </div>
+    <div class="comments__content">
+      <div class="comments__top">
+        <a class="comments__name" href="#">Delores G. Roberts</a>
+        <span class="comments__date">Add 11 Oct 2020</span>
+      </div>
+      <div class="comments__text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique
+          convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+          himenaeos. Suspendisse orci sem, ultrices </p>
+      </div>
+      <a class="comments__link" href="#">Reply</a>
+    </div>
+  </div>
+
+  <div class="comments__wrapper comments__wrapper--add">
+    <div class="comments__images">
+      <a class="comments__photo" href="#">
+        <img class="comments__img" src="./images/comments/2.jpg" alt="photo">
+      </a>
+    </div>
+    <div class="comments__content comments__content--add">
+      <div class="comments__top">
+        <a class="comments__name" href="#">Shannon S. Williams</a>
+        <span class="comments__date">Add 11 Oct 2020</span>
+      </div>
+      <div class="comments__text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique
+          convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra</p>
+      </div>
+      <a class="comments__link" href="#">Reply</a>
+    </div>
+  </div>
+
+  <div class="comments__wrapper">
+    <div class="comments__images">
+      <a class="comments__photo" href="#">
+        <img class="comments__img" src="./images/comments/3.jpg" alt="photo">
+      </a>
+    </div>
+    <div class="comments__content">
+      <div class="comments__top">
+        <a class="comments__name" href="#">Nicholas R. Coley</a>
+        <span class="comments__date">Add 11 Oct 2020</span>
+      </div>
+      <div class="comments__text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique
+          convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+          himenaeos. Suspendisse orci sem, </p>
+      </div>
+      <a class="comments__link" href="#">Reply</a>
+    </div>
+  </div>
+</div>
+            <div class="comment">
+  <h3 class="comment__title">
+    Leave A Comment
+  </h3>
+  <span class="sr-only">leave your comment</span>
+  <form class="comment__form contact-form" action="#">
+    <ul class="contact-form__information">
+      <li class="contact-form__item">
+        <label class="contact-form__label contact-form__label--name">
+          <input class="contact-form__input" type="text" placeholder="Name">
+        </label>
+      </li>
+      <li class="contact-form__item">
+        <label class="contact-form__label contact-form__label--email">
+          <input class="contact-form__input" type="text" placeholder="Email">
+        </label>
+      </li>
+    </ul>
+    <textarea class="contact-form__comment" placeholder="Comment"></textarea>
+    <button class="contact-form__btn btn-link" type="submit">post comment</button>
+  </form>
+</div>
+          </div>
+        </main>
       </div>
     </div>
-    <section class="detalis">
-      <div class="container">
-  
-        </div>
-      </div>
-    
-    </section>
-  
-  </main>
+    <div class="partners">
+  <div class="container">
+    <span class="sr-only">slider with links logos of our partners</span>
+    <ul class="partners__wrap ">
+      <li class="partners__img">
+        <a class="partners__link" href="#">
+          <img class="partners__pic" src="images/peterson.png" alt="partner-icons">
+        </a>
+      </li>
+      <li class="partners__img">
+        <a class="partners__link" href="#">
+          <img class="partners__pic" src="images/consulting.png" alt="partner-icons">
+        </a>
+      </li>
+      <li class="partners__img">
+        <a class="partners__link" href="#">
+          <img class="partners__pic" src="images/chainforce.png" alt="partner-icons">
+        </a>
+      </li>
+      <li class="partners__img">
+        <a class="partners__link" href="#">
+          <img class="partners__pic" src="images/nextg.png" alt="partner-icons">
+        </a>
+      </li>
+      <li class="partners__img">
+        <a class="partners__link" href="#">
+          <img class="partners__pic" src="images/vintage.png" alt="partner-icons">
+        </a>
+      </li>
+      <li class="partners__img">
+        <a class="partners__link" href="#">
+          <img class="partners__pic" src="images/peterson.png" alt="partner-icons">
+        </a>
+      </li>
+      <li class="partners__img">
+        <a class="partners__link" href="#">
+          <img class="partners__pic" src="images/consulting.png" alt="partner-icons">
+        </a>
+      </li>
+      <li class="partners__img">
+        <a class="partners__link" href="#">
+          <img class="partners__pic" src="images/chainforce.png" alt="partner-icons">
+        </a>
+      </li>
+      <li class="partners__img">
+        <a class="partners__link" href="#">
+          <img class="partners__pic" src="images/nextg.png" alt="partner-icons">
+        </a>
+      </li>
+      <li class="partners__img">
+        <a class="partners__link" href="#">
+          <img class="partners__pic" src="images/vintage.png" alt="partner-icons">
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+  </section>
   <footer class="footer">
   <section>
     <h2 class="sr-only">contact details</h2>
@@ -217,7 +602,6 @@
     </div>
   </div>
 </footer>
-
   <script src="js/main.min.js"></script>
 </body>
 

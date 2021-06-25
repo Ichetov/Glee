@@ -1,6 +1,73 @@
 $(function () {
 
- $('.shop__btn').on('click', function(){
+  $('.related__slider').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/slide-left.svg" alt=""></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="images/icons/slide-right.svg" alt=""></button>',
+      responsive: [
+      {
+        breakpoint: 1160,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 580,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
+$('.detalis-tabs__link').on('click', function (e) {
+e.preventDefault();
+$('.detalis-tabs__link').removeClass('detalis-tabs__link--active');
+$(this).addClass('detalis-tabs__link--active');
+   $('.detalis-tabs__text').removeClass('detalis-tabs__text--active');
+    $($(this).attr('href')).addClass('detalis-tabs__text--active');
+});
+
+   $('.details-lamp__num').styler();
+
+  $('.details-slide__small').slick({
+    asNavFor:'.details-slide__big',
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+      arrows: false,
+  });
+  $('.details-slide__big').slick({
+    asNavFor:'.details-slide__small',
+    draggable: false,
+    arrows: false,
+    fade: true,
+      responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        draggable: true,
+      }
+    }]
+  });
+
+ $('.shop-btn').on('click', function(){
 $('.filters').slideToggle();
  });
 
@@ -35,6 +102,8 @@ $('.filters').slideToggle();
     },
   })
 
+ 
+
   $('.card-product__star').rateYo({
      starWidth: "18px",
      normalFill: "#d6d6d6",
@@ -49,6 +118,12 @@ $('.filters').slideToggle();
      readOnly: true,
   });
 
+  $('.details-lamp__star').rateYo({
+     starWidth: "18px",
+     normalFill: "#d6d6d6",
+     ratedFill: "#ffcc00",
+     readOnly: true,
+  });
  
 
   $('.slider-shop__wrapper').slick({

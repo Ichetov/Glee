@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glee</title>
+  <link rel="icon" href="http://localhost:3000/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="http://localhost:3000/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  @include('./components/header.html')
+  <div class="breadcrumbs">
+    <div class="breadcrumbs__inner">
+      <h1 class="breadcrumbs__title">Contact</h1>
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Home</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__span" href="#">Contact</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <main class="main">
+    @include('./components/contact/contact.html')
+    @include('./components/home-page/news-blog.html')
+  </main>
+  @include('./components/footer.html')
+  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
+  <script>
+    let map;
+    -95.73641374885028
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+        center: {
+          lat: 29.953810138966624,
+          lng: -95.73641374885028
+        },
+        zoom: 9,
+      });
+    }
+  </script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

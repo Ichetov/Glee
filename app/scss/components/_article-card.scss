@@ -157,3 +157,62 @@
     }
   }
 }
+
+.work{
+    display: flex;
+    font-size: 12px;
+    font-weight: $DMSans400;
+    color: $blue500;
+    border-top: 1px solid $white200;
+    padding-top: 15px;
+    margin-top: auto;
+    color: #222933;
+
+  &__date {
+    padding-left: 12px;
+    margin-right: 30px;
+    position: relative;
+    text-transform: uppercase;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/date.svg');
+      left: 0;
+      top: 3px;
+      width: 10px;
+      height: 10px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__author {
+    padding-left: 12px;
+    transition: color 0.4s;
+    position: relative;
+    text-transform: uppercase;
+    font-family: $Rubik;
+    font-weight: $Rubik400;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/solid.svg');
+      left: 0;
+      top: 3px;
+      width: 10px;
+      height: 10px;
+      background-repeat: no-repeat;
+    }
+
+    &:hover {
+      color: $orange200;
+    }
+    &:active {
+      color: $red500;
+    }
+    &:focus {
+      outline: 1px solid $red500;
+    }
+  }
+}

@@ -1,0 +1,177 @@
+.details-lamp {
+  font-family: $Rubik;
+  font-weight: $Rubik400;
+  margin: 110px 0 115px;
+  @include max($xl) {
+    margin: 20px 0 20px;
+  }
+  &__items {
+    display: flex;
+    margin-bottom: 90px;
+    @include max($xl) {
+      display: block;
+      margin-bottom: 30px;
+    }
+  }
+  &__slide {
+    margin-right: 55px;
+    max-width: 555px;
+    width: 100%;
+    @include max($xxl) {
+      width: auto;
+      margin: 0 auto;
+    }
+  }
+  &__content {
+    max-width: 540px;
+    width: 100%;
+    @include max($xl) {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    padding-top: 25px;
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: $Rubik400;
+    color: $blue900;
+    @include max($xl) {
+      text-align: center;
+      padding-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text,
+  &__star {
+    margin-bottom: 30px;
+    @include max($xl) {
+      margin: 0 auto 10px;
+    }
+  }
+  &__figure {
+    font-size: 30px;
+    color: $blue900;
+    margin-bottom: 35px;
+    @include max($xl) {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+  &__wrap {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    @include max($xl) {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    @include max($xl) {
+      flex-direction: column;
+    }
+  }
+  &__link {
+    padding: 17px 50px;
+    background-color: $blue300;
+    text-transform: uppercase;
+    color: $white100;
+    margin-left: 15px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  &__num {
+    @include max($xl) {
+      margin-bottom: 8px;
+    }
+  }
+  &__descript {
+    @include max($xl) {
+      text-align: center;
+    }
+  }
+  .jq-number {
+    display: inline-block;
+    position: relative;
+  }
+
+  .jq-number__field input {
+    width: 150px;
+    padding: 16px 9px;
+    border: 1px solid $blue300;
+    outline: transparent;
+    background: transparent;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .jq-number__spin {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 50px;
+    height: 53px;
+    border: 1px solid $blue300;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.4s;
+    @include max($xl) {
+      transform: translateY(-58%);
+      height: 52px;
+    }
+
+    &:hover {
+      background-color: $orange400;
+    }
+    &:active {
+      color: $orange400;
+    }
+
+    &:focus {
+      outline: 1px solid $red500;
+    }
+  }
+
+  .jq-number__spin.minus {
+    left: 0;
+    top: 50%;
+  }
+
+  .jq-number__spin::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 1px;
+    background-color: $blue900;
+    border: none;
+  }
+
+  .jq-number__spin.minus:after {
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+  }
+
+  .jq-number__spin.plus::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 22px;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 10px;
+    background-color: $blue900;
+    border: none;
+  }
+}

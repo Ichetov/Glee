@@ -25,11 +25,7 @@
   }
 
   &__item {
-    color: #222933;
-    &:last-child {
-      color: $white500;
-    }
-
+    color: $white500;
     &:not(:last-child) {
       position: relative;
       margin-right: 20px;

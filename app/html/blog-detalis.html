@@ -13,35 +13,105 @@
 
 <body>
   @include('./components/header.html')
-
-  <main class="main">
-    <div class="breadcrumbs">
-      <div class="breadcrumbs__inner">
-        <h1 class="breadcrumbs__title">Blog Detalis</h1>
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Home</a>
-          </li>
+  <div class="breadcrumbs">
+    <div class="breadcrumbs__inner">
+      <h1 class="breadcrumbs__title">Blog Detalis</h1>
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">Home</a>
+        </li>
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="#">Blog</a>
         </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Blog detalis</a>
-          </li>
-        </ul>
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__span">Blog detalis</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <section class="blog">
+    <div class="container">
+      <div class="blog__inner">
+        @include('./components/blog/blog-filters.html')
+        <button class="shop-btn">
+          <svg class="shop-btn__img">
+            <use xlink:href="images/sprite.svg#filter-solid"></use>
+          </svg>
+        </button>
+        <main class="main">
+          <h1 class="blog sr-only">this is blog details</h1>
+          <div class="blog__wrap">
+            <article class="blog__article blog-one">
+              <div class="blog__images blog-one__images">
+                <img class="blog__img" src="./images/blog/dizayn.jpg" alt="blog images">
+                <div class="work blog__info">
+                  <time class="work__date blog__date" datetime="2020-01-28">
+                    28 january, 2020
+                  </time>
+                  <a class="work__author blog__author" href="#">
+                    <span class="sr-only">when you click on it, you will go to the author's page</span>
+                    by admin
+                  </a>
+                </div>
+              </div>
+              <h2 class="blog__title title">Fonsectetur adipisicing eiusmod</h2>
+              <div class="blog__box">
+                <p class="blog__text">
+                  Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                  minim venia Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                </p>
+                <p>
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit
+                  amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                  fugiat nulla pariatur.
+                </p>
+              </div>
+              <blockquote class="blog__blockquote">
+                <p>
+                  Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                </p>
+                <cite class="blog__cite">Wiusmod tempor</cite>
+              </blockquote>
+
+              <div class="blog-one__wrap">
+                <div class="blog-one__pic">
+                  <img class="blog-one__images" src="./images/blog/blog.jpg" alt="blog pic">
+                </div>
+                <div class="blog-one__content">
+                  <h3 class="blog-one__title">Riusmod tempor incididunt </h3>
+                  <div class="blog-one__text">
+                    <p>
+                      consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="blog-one__content">
+                <h3 class="blog-one__title">Kajtsal jervcm eoaspckred</h3>
+                <div class="blog-one__text">
+                  <p>
+                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  </p>
+                </div>
+              </div>
+            </article>
+            @include('./components/blog/designer.html')
+            @include('./components/blog/comments.html')
+            @include('./components/blog/comment.html')
+          </div>
+        </main>
       </div>
     </div>
-    <section class="detalis">
-      <div class="container">
-  
-        </div>
-      </div>
-    
-    </section>
-  
-  </main>
+    @include('./components/home-page/partners.html')
+  </section>
   @include('./components/footer.html')
-
   <script src="js/main.min.js"></script>
 </body>
 

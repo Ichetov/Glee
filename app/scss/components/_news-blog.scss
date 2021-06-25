@@ -1,8 +1,11 @@
 .news-blog {
+  position: relative;
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    margin-bottom: 35px;
 
     @include max($xl) {
       margin-bottom: 15px;
@@ -10,10 +13,12 @@
 
     @include max($md) {
       flex-direction: column;
-      margin-bottom: 0;
+      margin-bottom: 10px;
     }
   }
-
+  &__title.title {
+    margin:0;
+  }
   &__link {
     padding-right: 30px;
     position: relative;
@@ -24,15 +29,15 @@
     }
 
     &::after {
-      content: '';
-      background-image: url('../images/icons/shape.svg');
+      content: "";
+      background-image: url("../images/icons/shape.svg");
       position: absolute;
       width: 15px;
       height: 15px;
       background-repeat: no-repeat;
       right: 0;
       top: 5px;
-      transition: transform 0.5s,
+      transition: transform 0.5s;
     }
   }
 
@@ -40,6 +45,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 30px;
+    position: relative;
 
     @include max($xl) {
       grid-template-columns: repeat(1, 1fr);
@@ -48,7 +54,7 @@
 
   &__inner {
     max-width: 370px;
-    margin-bottom: -170px;
+    // margin-bottom: -170px;
     background-color: $white100;
 
     @include max($xl) {
@@ -59,5 +65,15 @@
       max-width: 293px;
     }
   }
-
+  &__background {
+    position: absolute;
+    z-index: -1;
+    bottom: 166px;
+    width: 100%;
+    height: 274px;
+    background-color: #fef7f0;
+    @include max($xl) {
+      display: none;
+    }
+  }
 }

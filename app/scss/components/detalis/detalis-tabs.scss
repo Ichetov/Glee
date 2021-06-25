@@ -1,0 +1,56 @@
+
+.detalis-tabs {
+  margin-bottom: 100px;
+  @include max($xl) {
+    margin-bottom: 20px;
+  }
+  &__top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+    @include max($xl) {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+  }
+  &__inner {
+    margin-right: 12px;
+    @include max($xl) {
+      margin-right: 0;
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__link {
+    padding: 15px 70px;
+    background-color: $blue500;
+    color: $blue700;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+    &:hover {
+      background-color: $blue300;
+      color: $white100;
+    }
+  }
+  &__infomation {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+  &__link--active {
+    color: $white100;
+    background-color: $blue300;
+  }
+
+  &__text {
+    display: none;
+    &.detalis-tabs__text--active {
+      display: block;
+      @include max($xl) {
+        text-align: center;
+      }
+    }
+  }
+}

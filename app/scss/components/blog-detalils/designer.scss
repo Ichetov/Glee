@@ -1,0 +1,78 @@
+.designer {
+  padding: 23px 0;
+  border-top: 2px solid #ebebeb;
+  border-bottom: 2px solid #ebebeb;
+  display: flex;
+  justify-content: space-between;
+  font-family: $Rubik;
+  font-weight: $Rubik400;
+  margin-bottom: 60px;
+  @include max($xl) {
+    margin-bottom: 26px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  @include max($md) {
+    flex-direction: column;
+    align-items: center;
+  }
+  &__wrapper {
+    display: flex;
+    @include max($md) {
+      margin-bottom: 8px;
+    }
+  }
+  &__photo {
+    margin-right: 25px;
+  }
+  &__name {
+    display: block;
+    color: #333333;
+    font-size: 18px;
+    font-weight: $Rubik500;
+    margin-bottom: 10px;
+  }
+  &__profession {
+    color: #666666;
+  }
+  &__bottom,
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__top {
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  &__link {
+    color: #666666;
+  }
+
+  &__decr {
+    margin-right: 20px;
+    @include max($md) {
+      margin-right: 73px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__pic {
+    width: 19px;
+    height: 21px;
+    fill: #a1a1a1;
+    transition: fill 0.3s;
+    &:hover {
+      fill: $red500;
+    }
+  }
+}

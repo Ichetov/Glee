@@ -2,6 +2,7 @@
   font-family: $Rubik;
   font-weight: $Rubik400;
   color: $blue700;
+  min-width: 270px;
   @include max($xxl) {
     display: none;
     position: absolute;
@@ -10,7 +11,7 @@
     z-index: 100;
     background: #fff;
     width: 100%;
-   padding: 0 10px;
+    padding: 0 10px;
   }
   &__title {
     cursor: pointer;

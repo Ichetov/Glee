@@ -1,0 +1,63 @@
+.details-slide {
+  display: flex;
+  &__small {
+    width: 140px;
+    margin-right: 25px;
+    @include max($xxl) {
+      display: none;
+    }
+  }
+
+  &__small-inner {
+    min-width: 140px;
+    height: 160px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $blue100;
+    transition: border-radius 0.4s, border 0.4s;
+    &:hover {
+      border-radius: 70%;
+      border: 2px solid $blue700;
+    }
+  }
+
+  &__small-img {
+    object-fit: contain;
+    width: 100px;
+    height: 160px;
+  }
+
+  &__big {
+    width: 390px;
+    height: 535px;
+    padding: 40px 0;
+    border: 2px solid $blue100;
+    @include max($xl) {
+      max-width: 100%;
+      margin: 0 auto;
+      width: 390px;
+      height: 425px;
+      padding: 17px 5px;
+    }
+    @include max($ml) {
+      height: 315px;
+    }
+  }
+
+  &__big-inner {
+    width: 95%;
+  }
+  &__big-img {
+    width: 325px;
+    height: 390px;
+    object-fit: contain;
+    @include max($ml) {
+      height: 275px;
+    }
+  }
+  
+}
