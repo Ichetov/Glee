@@ -1,5 +1,9 @@
 
 .related {
+  margin-bottom: 110px;
+  @include max($xl) {
+      margin-bottom: 15px;
+    }
   &__title {
     margin-bottom: 65px;
     color: $blue700;

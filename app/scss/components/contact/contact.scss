@@ -1,4 +1,14 @@
 .contact {
+  &__form-btn {
+    background-size: 200% 100%;
+    transition: background-position 0.7s, color 0.5s ease-in;
+    background-image: linear-gradient(to left, transparent, transparent 50%, #00c6ff 50%, #00c6ff);
+    background-position: 100% 0;
+    &:hover {
+      background-position: 0 0;
+      color: $white900;
+    }
+  }
   &__top {
     text-align: center;
     margin-bottom: 115px;
@@ -36,7 +46,7 @@
     border: 2px solid transparent;
     transition: border-color 0.6s;
     &:hover {
-      border-color: $orange300;
+     animation: contact__item 1.3s infinite;
     }
     &:hover .contact__pic {
       fill: $white100;
@@ -74,6 +84,9 @@
     border: none;
     background-color: $white100;
     transition: background-color 0.5s;
+    @include max($md) {
+      margin-bottom: 20px;
+    }
   }
   &__caption {
     color: $white900;
@@ -130,7 +143,7 @@
     @include max($xl) {
       margin-bottom: 10px;
     }
-     @include max($md) {
+    @include max($md) {
       background-position-x: 94%;
     }
   }
@@ -143,6 +156,19 @@
     }
   }
 }
+
+@keyframes contact__item {
+  0% {
+    box-shadow: 0 0 0 0 rgba(11, 119, 108, 0);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(11, 119, 108, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(11, 119, 108, 0);
+  }
+}
+
 
 #map {
   width: 100%;

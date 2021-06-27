@@ -1,0 +1,61 @@
+.terms {
+  font-family: $Rubik;
+  font-weight: $Rubik400;
+  margin-bottom: 100px;
+  @include max($xl) {
+    margin-bottom: 15px;
+  }
+  &__title {
+    margin-bottom: 25px;
+    font-weight: $Rubik500;
+    @include max($xl) {
+      margin-bottom: 10px;
+    }
+  }
+  &__inner {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+      @include max($xl) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__items {
+    padding-left: 5px;
+    list-style: none;
+    counter-reset: item;
+    margin-bottom: 70px;
+    @include max($xl) {
+      margin-bottom: 10px;
+    }
+  }
+  &__item {
+    position: relative;
+    padding-left: 33px;
+
+    &::before {
+      position: absolute;
+      left: 0;
+    }
+
+    &:nth-child(-n + 9)::before {
+      content: "0" counter(item);
+      counter-increment: item;
+    }
+
+    &:nth-child(n + 10)::before {
+      content: counter(item);
+      counter-increment: item;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+.terms-breadcrumbs {
+  margin-bottom: 110px;
+  @include max($xl) {
+    margin-bottom: 15px;
+  }
+}

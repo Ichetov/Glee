@@ -14,7 +14,7 @@
 <body>
   <h1 class="sr-only">online store glee</h1>
   @include('./components/header.html')
-  <div class="breadcrumbs">
+  <div class="breadcrumbs  terms-breadcrumbs">
     <div class="breadcrumbs__inner">
       <h1 class="breadcrumbs__title">Product Detalis</h1>
       <ul class="breadcrumbs__list">
@@ -28,8 +28,7 @@
     </div>
   </div>
   <main class="main">
-    @include('./components/detalis/detalis-lamp.html')
-    @include('./components/detalis/related.html')
+    @include('./components/terms/terms.html')
     @include('./components/home-page/news-blog.html')
   </main>
   @include('./components/footer.html')
