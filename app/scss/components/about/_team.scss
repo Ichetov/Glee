@@ -1,8 +1,10 @@
 .team {
   &__inner {
     display: flex;
+    margin-bottom: 110px;
     @include max($xl) {
       flex-direction: column;
+      margin-bottom: 10px;
     }
   }
   &__content {

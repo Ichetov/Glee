@@ -1,7 +1,7 @@
 .details-lamp {
   font-family: $Rubik;
   font-weight: $Rubik400;
-  margin: 110px 0 115px;
+  margin-bottom:115px;
   @include max($xl) {
     margin: 20px 0 20px;
   }
@@ -77,6 +77,11 @@
     text-transform: uppercase;
     color: $white100;
     margin-left: 15px;
+    font-weight: $Rubik400;
+    position: relative;
+    &:hover{
+      animation: details-lamp__link 5s 0s both infinite;
+    }
   }
 
   &__item {
@@ -174,4 +179,15 @@
     background-color: $blue900;
     border: none;
   }
+}
+@keyframes details-lamp__link {
+	0%, 20% {
+		transform: translate3d(0, 0, 0);
+	}
+	10%, 14%, 18%, 2%, 6% {
+		transform: translate3d(-7px, 0, 0);
+	}
+	12%, 16%, 4%, 8% {
+		transform: translate3d(7px, 0, 0);
+	}
 }

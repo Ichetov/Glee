@@ -16,24 +16,22 @@
   @include('./components/header.html')
   <div class="breadcrumbs">
     <div class="breadcrumbs__inner">
-      <h1 class="breadcrumbs__title">Product Detalis</h1>
+      <h1 class="breadcrumbs__title">Log in</h1>
       <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="#">Home</a>
         </li>
         <li class="breadcrumbs__item">
-          <span class="breadcrumbs__span" href="#">Product Detalis</span>
+          <span class="breadcrumbs__span">Log in</span>
         </li>
       </ul>
     </div>
   </div>
-  <main class="main">
-    @include('./components/detalis/detalis-lamp.html')
-    @include('./components/detalis/related.html')
-    @include('./components/home-page/news-blog.html')
+  <main>
+    @include('./components/login/modal.html')
+    @include('./components/home-page/partners.html')
   </main>
   @include('./components/footer.html')
-
   <script src="js/main.min.js"></script>
 </body>
 

@@ -7,6 +7,7 @@
         <ul class="contact__items">
           <li class="contact__item">
             <a class="contact__link" href="#">
+              <span class="sr-only">When you click on the link, you will go to the page with the map</span>
               <svg class="contact__pic contact__address">
                 <use xlink:href="images/sprite.svg#address"></use>
               </svg>
@@ -23,6 +24,7 @@
           </li>
           <li class="contact__item">
             <a class="contact__link" href="#">
+              <span class="sr-only"> When you click on the link, you will go to the page with the map</span>
               <svg class="contact__pic contact__email">
                 <use xlink:href="images/sprite.svg#email"></use>
               </svg>
@@ -30,8 +32,8 @@
             <p class="contact__caption">Our Email</p>
             <div class="contact__box">
               <p class="contact__wrapper">
-                <span>Main Email : </span><a class="contact__wrapper-link"
-                  href="mailto:contact@website.com">contact@website.com</a>
+                <span>Main Email : </span><a class="contact__wrapper-link" href="mailto:contact@website.com">
+                  <span class="sr-only"> when you click on it, the application will open to send us an email</a>
               </p>
               <p class="contact__wrapper">
                 <span>Inquiries : </span><a class="contact__wrapper-link" href="mailto:Info@mail.com">info@mail.com</a>
@@ -40,6 +42,7 @@
           </li>
           <li class="contact__item">
             <a class="contact__link" href="#">
+              <span class="sr-only"> When you click on the link, you will go to the page to make a call to us</span>
               <svg class="contact__pic contact__phone">
                 <use xlink:href="images/sprite.svg#phone"></use>
               </svg>
@@ -47,11 +50,16 @@
             <p class="contact__caption">Our Phone</p>
             <div class="contact__box">
               <p class="contact__wrapper">
-                <span>Office Telephone : </span> <a href="tel:+0029129102320" class="contact__wrapper-link">
+                <span>Office Telephone : </span>
+                <a href="tel:+0029129102320" class="contact__wrapper-link">
+                  <span class="sr-only">when you click on it, the application will open to make a call to
+                    the specified number office</span>
                   0029129102320</a>
               </p>
               <p class="contact__wrapper">
-                <span>Mobile : </span> <a href="tel:+000232439493" class="contact__wrapper-link"> 000 2324 39493</a>
+                <span>Mobile : </span> <a href="tel:+000232439493" class="contact__wrapper-link">
+                  <span class="sr-only">when you click on it, the application will open to make a call to
+                    the specified number mobile</span> 000 2324 39493</a>
               </p>
             </div>
           </li>
@@ -63,22 +71,29 @@
         <ul class="contact-form__information contact__form-info">
           <li class="contact-form__item contact__form-item">
             <label class="contact-form__label contact-form__label--name">
-              <input class="contact-form__input contact__form-input" type="text" placeholder="Name">
+              <span class="sr-only">field for filling in the name</span>
+              <input class="contact-form__input contact__form-input" type="text" name="text" placeholder="Name">
             </label>
           </li>
           <li class="contact-form__item contact__form-item">
-            <label class="contact-form__label contact-form__label--email ">
-              <input class="contact-form__input contact__form-input" type="text" placeholder="Email">
+            <label class="contact-form__label contact-form__label--email">
+              <span class="sr-only">field for filling in the email</span>
+              <input class="contact-form__input contact__form-input" type="text" name="text" placeholder="Email">
             </label>
           </li>
         </ul>
-        <textarea class="contact-form__comment contact__form-comment" placeholder="Message"></textarea>
-        <button class="contact-form__btn btn-link  contact__form-btn" type="submit">send message</button>
+        <label class="contact-form__labe">
+          <span class="sr-only">The input field for filling in the message</span>
+          <textarea class="contact-form__comment contact__form-comment" placeholder="Message"></textarea>
+        </label>
+        <button class="contact-form__btn contact__form-btn" type="submit">
+          <span class="sr-only">the button that the completed form will be sent to when clicked</span>
+          send message</button>
       </form>
       <div class="contact__map">
+        <span class="sr-only">a map with our location</span>
         <div id="map"></div>
       </div>
     </div>
-  </div>
   </div>
 </section>
